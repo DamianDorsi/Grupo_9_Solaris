@@ -1,4 +1,4 @@
- Solaris
+ # Solaris
  Somos una página orientada a la venta de instrumentos y componentes musicales. Apuntamos a todo público con o sin experiencia en el ámbito de la música, que desee adquirir nuestros productos. Proveyendo el asesoramiento necesario para lograr que el cliente queda satisfecho con su comprá.
 
 ## Integrantes
@@ -20,3 +20,5 @@
 3. [Guitarras Ibáñez](https://www.ibanez.com/na/): Esta página la elegimos principalmente por detalles específicos en su diseño que nos gustaría intentar desarrollar.
 4. [TodoMusica](http://www.todomusica.com.ar/): Esta página la elegimos principalmente por detalles específicos en su diseño que nos gustaría intentar desarrollar.
 5. [Musical Monroe](https://musicalmonroe.com.ar/):Esta página la elegimos principalmente por detalles específicos en su diseño que nos gustaría intentar desarrollar.
+
+### Tablero de trabajo : [Solaris](https://trello.com/b/SXcWU9gX/solaris)
