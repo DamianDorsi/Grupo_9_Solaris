@@ -1,0 +1,3 @@
+# Retrospectiva 
+
+![](./sprints/diagramaEstrella.png)

@@ -22,3 +22,6 @@
 5. [Musical Monroe](https://musicalmonroe.com.ar/):Esta página la elegimos principalmente por detalles específicos en su diseño que nos gustaría intentar desarrollar.
 
 ### Tablero de trabajo : [Solaris](https://trello.com/b/SXcWU9gX/solaris)
+
+### [Paleta de Colores](https://colorhunt.co/palette/196113)
+### [Fuente](https://fonts.google.com/specimen/Roboto)
