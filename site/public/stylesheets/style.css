@@ -1,8 +1,103 @@
-body {
-  padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+/* COLORES */
+:root{
+  --color-azulOscuro: #1b262c;
+  --color-azul: #0f4c75;
+  --color-celeste: #3282b8;
+  --color-celesteCLaro: #bbe1fa;
+
+}
+/* GENERAL */
+*{
+  box-sizing: border-box;
+  margin: 0;
 }
 
-a {
-  color: #00B7FF;
+a{
+  text-decoration: none;
+  color: var(--color-celesteCLaro);
+  font-size: 16px;
+}
+
+a:hover{
+  color: var(--color-celesteCLaro);
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+  padding-left: 10px;
+}
+
+header{
+  background-color: var(--color-azulOscuro);
+  padding: 20px;
+}
+
+header .logo{
+  padding: 0px;
+  height: 0px;
+}
+
+header .cart{
+  color: var(--color-celesteCLaro);
+}
+
+header form{
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-size: 0.8rem;
+}
+
+header form input{
+  border: solid 1px var(--color-celesteCLaro);
+  display: block;
+  width: 100%;
+  padding: 2px 12px 2px 12px;
+  border-radius: 2px;
+  height: auto;
+  font-family: cursive;
+  font-size: auto;
+}
+
+header form input:focus,
+form button:focus {
+  outline: none;
+}
+
+header form button{
+  position: absolute;
+  right: 2px;
+  height: 81%;
+  background-color: var(--color-celesteCLaro);
+  border: none;
+  border-left: none;
+  color: var(--color-grisOscuro);
+  cursor: pointer;
+}
+
+header nav{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+header nav button.burger:focus {
+  outline: 1px solid var(--color-celesteCLaro);
+}
+
+header nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin-top: 30px;
+}
+
+/* VERSION TABLET */
+@media(min-width:768px){
+  header ul li {
+  justify-content: space-between;
+  padding-right: 12px;
+}
 }
