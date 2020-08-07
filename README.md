@@ -1,5 +1,5 @@
  # Solaris
- Somos una página orientada a la venta de instrumentos y componentes musicales. Apuntamos a todo público con o sin experiencia en el ámbito de la música, que desee adquirir nuestros productos. Proveyendo el asesoramiento necesario para lograr que el cliente queda satisfecho con su comprá.
+ Somos una página orientada a la venta de instrumentos y componentes musicales. Apuntamos a todo público con o sin experiencia en el ámbito de la música, que desee adquirir nuestros productos. Proveyendo el asesoramiento necesario para lograr que el cliente queda satisfecho con su compra.
 
 ## Integrantes
 ### Hector Alejandro Alfonzo
