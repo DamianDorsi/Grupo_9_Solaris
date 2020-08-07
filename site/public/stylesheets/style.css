@@ -4,6 +4,8 @@
   --color-azul: #0f4c75;
   --color-celeste: #3282b8;
   --color-celesteCLaro: #bbe1fa;
+  --color-grisClaro: #ebebeb;
+  --color-grisOscuro: #666666;
 
 }
 /* GENERAL */
@@ -11,7 +13,6 @@
   box-sizing: border-box;
   margin: 0;
 }
-
 a{
   text-decoration: none;
   color: var(--color-celesteCLaro);
@@ -25,39 +26,91 @@ a:hover{
 
 li{
   list-style: none;
-  padding-left: 10px;
 }
-
+/* -------------------------------------HEADER MOBILE FIRST------------------------- */
+/* CABECERA */
 header{
-  background-color: var(--color-azulOscuro);
-  padding: 20px;
+  background-color: var(--color-azul);
+  padding: 10px;
 }
-
-header .logo{
-  padding: 0px;
-  height: 0px;
+.fondo{
+  height: 7vh;
+  background-color: rgba(8, 8, 8, 0.493);
+  z-index: 0;
+  position: absolute;
+  margin-top: 5vh;
+  width: 100%;
+  margin-left: -20px;
 }
-
-header .cart{
-  color: var(--color-celesteCLaro);
-}
-
-header form{
+.row{
   position: relative;
+  justify-content: space-between;
+}
+.redes{
+  display: none;
+}
+/* LOGO */
+header .logo{
+  margin: -15px auto;
+  text-align: center;
+ /*  margin-bottom: 15px; */
+
+}
+header .logo img{
+  padding: 0px;
+  height: 20vh;
+}
+/* NAVBAR */
+.navBar{
+  order:0;
+}
+.navBar li{
+  margin: 5px 0;
+}
+header nav {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+header nav button.burger {
+  color: var(--color-celesteCLaro);
+  background-color: var(--color-celeste);
+  border: none;
+  border-radius: 4px;
+  padding: 3px 15px;
+  margin-bottom: 5px;
+}
+
+
+/* BUSCADOR */
+header .buscador{
+width: 100%;
+padding-right: 0;
+
+
+}
+header form {
+  right: 0px;
+  position: absolute;
   display: flex;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 0.8em;
+  padding-right: 0;
+;
 }
-
-header form input{
-  border: solid 1px var(--color-celesteCLaro);
+header form input {
+  border: solid 1px var(--color-grisClaro);
   display: block;
   width: 100%;
-  padding: 2px 12px 2px 12px;
-  border-radius: 2px;
-  height: auto;
-  font-family: cursive;
-  font-size: auto;
+  padding: 7px 0px 7px 7px;
+  border-radius: 5px;
+  height: 30px;
+  font-size: 1.5em;
+  font-family: inherit;
+  right: 0px;
+  
 }
 
 header form input:focus,
@@ -65,39 +118,152 @@ form button:focus {
   outline: none;
 }
 
-header form button{
+header form button {
   position: absolute;
   right: 2px;
-  height: 81%;
-  background-color: var(--color-celesteCLaro);
+  height: 70%;
+  background-color: white;
   border: none;
-  border-left: none;
+  border-left: solid 1px var(--color-grisClaro);
   color: var(--color-grisOscuro);
   cursor: pointer;
 }
-
-header nav{
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+/* CartBar */
+.cartBar{
+  order:3;
+  padding-left: 0px;
 }
-
-header nav button.burger:focus {
-  outline: 1px solid var(--color-celesteCLaro);
+.cartBar .menu2{
+  justify-content: flex-end;
+  text-align: right;
 }
-
-header nav ul {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  margin-top: 30px;
+.cartBar .menu2 li {
+margin: 5px 0;
 }
+.cartBar ul li .icon{
+  display: none;
+}/* -------CIERRE HEADER MOBILE----- */
 
-/* VERSION TABLET */
+
+/* TABLET */
 @media(min-width:768px){
-  header ul li {
-  justify-content: space-between;
-  padding-right: 12px;
+    /* -----------------------------------HEADER TABLET---------------------------- */
+  /* LOGO */
+  .redes{
+    display: flex;
+    position: absolute;
+    top: 10px;
+    left: 120px;
+  }
+  .redes li a{
+    margin-right: 10px;
+    font-size: 1.5em;
+  }
+  header .logo img{
+    margin-left: -45px;
+    height: 20vh;
+  }
+  /* NAVBAR MENU1 */
+  header .navBar{
+    order:0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  header .menu {
+    margin-left: 3px;
+  }
+  header .menu ul li {
+    justify-content: space-between;
+    padding-right: 15px;
+  }
+  header  .menu ul li a{
+    font-size: 1.83em;
+  }
+  /* NAVBAR MENU2 USER */
+  .cartBar #navbarSupportedContent{
+    display: flex;
+   justify-content: flex-end;
+   margin-top: -25px;
+  }
+  .cartBar ul li .entero{
+    display: none;
+  }
+  .cartBar ul li .icon{
+    display: flex;
+    font-size: 1.5em;
+  }
+  header .menu2 ul li {
+    justify-content: space-between;
+    padding-right: 40px;
+  }
+  header .menu2 ul li:last-child{
+    padding-right: 0px;
+  }
+
+/* BUSCADOR */
+header .contenedorBuscador{
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  order:2 ;
+  width: 200px;
+  padding-bottom: 5px;
 }
+
+.buscador form{
+  width: 330px;
+  margin: -25px 15px 0 0;
+
+  
+}/* -----------CIERRE HEAD TABLET -------------*/
+
+/* DESKTOP */
+@media(min-width:1024px) {
+  /* -----------------------------------HEADER DESKTOP---------------------------- */
+  /* NAVBAR MENU1 */
+  header .menu{
+    margin-left: 20px;
+  }
+  header .menu ul li {
+    justify-content: space-between;
+    padding-right: 20px;
+  }
+  header  .menu ul li a{
+    font-size: 1.83em;
+  }
+    /* NAVBAR MENU2 */
+    header .cartBar{
+      order:22;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 5px;
+    }
+    header .menu2 ul li {
+      justify-content: space-between;
+      padding-right: 30px;
+    }
+    header .menu2 ul li i{
+      margin-left: 10px;
+      margin-top: 5px;
+    }
+    .cartBar ul li .entero{
+      display: flex;
+      font-size: 1.2em;
+    }
+    .cartBar ul li .icon{
+      display: none;
+      font-size: 1.5em;
+    }
+    /* BUSCADOR */
+  header .contenedorBuscador{
+  display: flex;
+  align-items: center;
+  padding-bottom: 0px;
 }
+.buscador form{
+  width: 80%;
+margin-top: -12px;
+
+}/* ------CIERRE HEAD DESKTOP---------- */
+
+}/* CIERRE DE CSS */
