@@ -1,26 +1,36 @@
 <!--HEADER Y NAVBAR-->
     <header class="container-fluid">
-  <!--CAJA CONTENEDORA DE BOOTSTRAP-->
+<!-- CAJA DE LA LINEA DE FONDO OSCURA -->
   <div class="container-fluid fondo">
 
   </div>
-  <!-- caja redes sociales -->
+
+  <!--CAJA CONTENEDORA DE BOOTSTRAP-->
+      <div class="container">
+
+  <!--CAJA CONTENEDORA DE LOGO, BUSCADOR,USUARIOS Y REDES-->
+        <div class="row">
+
+                        <!-- caja info y redes sociales -->
   <div class="redes">
     <nav>
         <ul>
             <li>
-                <a href=""><i class="fab fa-facebook-f"></i></a>
-                <a href=""><i class="fab fa-instagram"></i></a>
-                <a href=""><i class="fab fa-twitter"></i></a>
-                <a href=""><i class="fab fa-youtube"></i></a>
+                <a href=""><i class="fab fa-facebook-square face"></i></a>
+                <a href=""><i class="fab fa-instagram insta"></i></a>
+                <a href=""><i class="fab fa-twitter tw"></i></a>
+                <a href=""><i class="fab fa-youtube yt"></i></a>
+            </li>
+        </ul>
+        <ul class="info">
+            <li>
+                <a href="">Quienes somos <i class="fas fa-users"></i></a>
+                <a href="">Sucursales <i class="fas fa-map-marker-alt"></i></a>
+                <a href="">Contacto <i class="fas fa-envelope-open-text"></i></a>
             </li>
         </ul>
     </nav>
 </div>
-
-      <div class="container">
-  <!--CAJA CONTENEDORA DE LOGO, BUSCADOR E ICONO CON <A>-->
-        <div class="row">
                 <!--caja que contiene el logotipo-->
             <div class="col-12 col-md-2 col-lg-1 logo">
                 <a href=""><img src="/images/solarisAzulsimple.png" alt=" "></a>
@@ -36,18 +46,52 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     
                         <!--barra de menu izquierdo-->
-                        <ul class="menu navbar-nav mr-auto">
-                            <li>
-                                <a href=" ">GUITARRAS</a>
+                        <ul class="menu navbar-nav mr-auto">                         
+                            <li>  <!-- GUITARRAS -->                                 
+                                <div class="btn-group">
+                                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false"><a href="">GUITARRAS</a>
+                                    </button>
+                                    <div class="dropdown-menu opciones">
+                                      <a class="dropdown-item" href="#">Criollas</a>
+                                      <a class="dropdown-item" href="#">Eléctricas</a>
+                                      <a class="dropdown-item" href="#">Acústicas</a>
+                                      <a class="dropdown-item" href="#">Electro-Acústicas</a>
+                                    </div>
+                                  </div>
+                            </li>                          
+                            <li><!-- BAJOS -->
+                                <div class="btn-group">
+                                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false"><a href="">BAJOS</a>
+                                    </button>
+                                    <div class="dropdown-menu opciones">
+                                      <a class="dropdown-item" href="#">Eléctrico</a>
+                                      <a class="dropdown-item" href="#">Acústico</a>
+                                      <a class="dropdown-item" href="#">Otros</a>
+                                    </div>
+                                  </div>
+                            </li>                            
+                            <li><!-- BATERIAS -->
+                                <div class="btn-group">
+                                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false"><a href="">BATERIAS</a>
+                                    </button>
+                                    <div class="dropdown-menu opciones">
+                                      <a class="dropdown-item" href="#">Acústicas</a>
+                                      <a class="dropdown-item" href="#">Electrónicas</a>
+                                      <a class="dropdown-item" href="#">Otros</a>
+                                                                          </div>
+                                  </div>
                             </li>
-                            <li>
-                                <a href=" ">BAJOS</a>
-                            </li>
-                            <li>
-                                <a href=" ">BATERIAS</a>
-                            </li>
-                            <li>
-                                <a href=" ">ACCESORIOS</a>
+                            <li><!-- ACCESORIOS -->
+                                <div class="btn-group">
+                                    <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false"><a href="">ACCESORIOS</a>
+                                    </button>
+                                    <div class="dropdown-menu opciones">
+                                      <a class="dropdown-item" href="#">Guitarra</a>
+                                      <a class="dropdown-item" href="#">Bajo</a>
+                                      <a class="dropdown-item" href="#">Bateria</a>
+                                      <a class="dropdown-item" href="#">Otros</a>
+                                    </div>
+                                  </div>
                             </li>
                         </ul>
                     </div>
@@ -62,7 +106,7 @@
                     <!--boton para que desplegar el menu  en caso que el viewport sea tamaño movil-->
                     <button class="navbar-toggler burger" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><i class="fas fa-user"></i></button>
     
-                    <!--barra de menu que aparece a partir de la vesión de tablet-->
+                    <!--barra de menu que aparece en tamaño mobile-->
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
     
                         <!--barra de menu derecho-->
@@ -100,10 +144,6 @@
                 </div>
 
             </div>
-            <!-- caja contenedora redes sociales -->
-        </div>
-     </div><!-- cierre container -->
-
-
-
+        </div><!-- CIERRE  CAJA CONTENEDORA DE LOGO, BUSCADOR,USUARIOS Y REDES-->
+     </div><!-- cierre container BOOTSTRAP-->
   </header>
