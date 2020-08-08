@@ -39,8 +39,8 @@ header{
   z-index: 0;
   position: absolute;
   margin-top: 5vh;
-  width: 100%;
-  margin-left: -20px;
+  width: 101%;
+  margin-left: -19px;
 }
 .row{
   position: relative;
@@ -149,6 +149,7 @@ margin: 5px 0;
 @media(min-width:768px){
     /* -----------------------------------HEADER TABLET---------------------------- */
   /* LOGO */
+  
   .redes{
     display: flex;
     position: absolute;
@@ -177,7 +178,7 @@ margin: 5px 0;
     padding-right: 15px;
   }
   header  .menu ul li a{
-    font-size: 1.83em;
+    font-size: 1.50em;
   }
   /* NAVBAR MENU2 USER */
   .cartBar #navbarSupportedContent{
@@ -266,4 +267,4 @@ margin-top: -12px;
 
 }/* ------CIERRE HEAD DESKTOP---------- */
 
-}/* CIERRE DE CSS */
+}}/* CIERRE DE CSS */
