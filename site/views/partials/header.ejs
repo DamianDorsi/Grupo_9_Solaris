@@ -24,16 +24,16 @@
         </ul>
         <ul class="info">
             <li>
-                <a href="">Quienes somos <i class="fas fa-users"></i></a>
-                <a href="">Sucursales <i class="fas fa-map-marker-alt"></i></a>
-                <a href="">Contacto <i class="fas fa-envelope-open-text"></i></a>
+                <a href="../quienesSomos">Quienes somos <i class="fas fa-users"></i></a>
+                <a href="../sucursales">Sucursales <i class="fas fa-map-marker-alt"></i></a>
+                <a href="../contacto">Contacto <i class="fas fa-envelope-open-text"></i></a>
             </li>
         </ul>
     </nav>
 </div>
                 <!--caja que contiene el logotipo-->
             <div class="col-12 col-md-2 col-lg-1 logo">
-                <a href=""><img src="/images/solarisAzulsimple.png" alt=" "></a>
+                <a href="../"><img src="/images/solarisAzulsimple.png" alt=" "></a>
             </div>
             <!-- caja barra navegacion principal -->
             <div class="col-4 col-md-10 col-lg-8 navBar">
@@ -52,7 +52,7 @@
                                     <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="false" aria-expanded="false"><a href="">GUITARRAS</a>
                                     </button>
                                     <div class="dropdown-menu opciones">
-                                      <a class="dropdown-item" href="#">Criollas</a>
+                                      <a class="dropdown-item" href="productos/guitarras">Criollas</a>
                                       <a class="dropdown-item" href="#">Eléctricas</a>
                                       <a class="dropdown-item" href="#">Acústicas</a>
                                       <a class="dropdown-item" href="#">Electro-Acústicas</a>
@@ -111,21 +111,23 @@
     
                         <!--barra de menu derecho-->
                         <ul class=" usuario navbar-nav">
+                            <%/*  if (usuario.admin == true) { */ %>
+                                <li>
+                                    <a href="/productos/agregar" class="entero">Vender <i class="fas fa-dollar-sign"></i></a>
+                                    <a href="/productos/agregar" class="icon"><i class="fas fa-dollar-sign"></i></a>
+                                </li>
+                            <% /* }  */%> 
+<!--                             <li>
+                                <a href="/users" class="entero">Registrate <i class="far fa-address-card "></i></a>
+                                <a href="../users" class="icon"><i class="far fa-address-card "></i></a>
+                            </li> -->
                             <li>
-                                <a href=" " class="entero">Vender <i class="fas fa-dollar-sign"></i></a>
-                                <a href=" " class="icon"><i class="fas fa-dollar-sign"></i></a>
+                                <a href="/users" class="entero">Ingresá <i class="fas fa-sign-in-alt "></i></a>
+                                <a href="/users" class="icon"> <i class="fas fa-sign-in-alt "></i></a>
                             </li>
                             <li>
-                                <a href=" " class="entero">Registrate <i class="far fa-address-card "></i></a>
-                                <a href=" " class="icon"><i class="far fa-address-card "></i></a>
-                            </li>
-                            <li>
-                                <a href=" " class="entero">Ingresá <i class="fas fa-sign-in-alt "></i></a>
-                                <a href=" " class="icon"> <i class="fas fa-sign-in-alt "></i></a>
-                            </li>
-                            <li>
-                                <a href=" " class="entero">Carrito <i class="fas fa-shopping-cart"></i></a>
-                                <a href=" " class="icon"> <i class="fas fa-shopping-cart"></i></a>
+                                <a href="/carrito" class="entero">Carrito <i class="fas fa-shopping-cart"></i></a>
+                                <a href="/carrito" class="icon"> <i class="fas fa-shopping-cart"></i></a>
                             </li>
 
                         </ul>

@@ -314,7 +314,21 @@ header .contenedorBuscador{
   width: 80%;
 margin-top: -12px;
 }
+}/* ------CIERRE HEADER DESKTOP---------- */
 
-}/* ------CIERRE HEAD DESKTOP---------- */
+/*---------------------------------------------- MAIN MOBILE FIRST------------------------------------- */
+h1{/* H1 DE REFERENCIA BORRAR DESPUES */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 10%;
+}
+/* CIERRE DE MAIN */
+
+
+/* ------------------------------------------------FOOTER  MOBILE FIRST----------------------------------*/
+
+/* CIERRE DE FOOTER */
+
 
 }/* CIERRE DE CSS */
