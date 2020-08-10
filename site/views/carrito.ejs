@@ -2,8 +2,109 @@
 <%- include("./partials/header") %> <!-- HEADER -->
 
 <!-- ACA EL CODIGO -->
-<main>
-<h1>PAGINA CARRITO</h1>
+<main class="container-fluid "id="carrito">
+    <form class="container carrito" >
+    <div class="row">
+
+        <!-- ////////////////// CAJA 1 /////////////////////-->
+    <section class="col-12 col-lg-9 barra"><!-- contenedor fila 1  fila 2  y precio-->
+        
+                 <!-- fila 1 -->
+            <section class="filaDetalles col-12"><!-- fila detalles-->
+                <article class="col-12 col-md-6 col-lg-6" id="contenedorA">
+                         <p class="col-12 col-md-5">Producto</p>
+                         <p class="col-12 col-md-7">Descripcion</p>
+                </article><!-- cierre contenedor A -->
+                <article class="col-md-6 col-lg-6" id="contenedorB">
+                         <p class="col-md-5 col-lg-4">Precio unidad</p>
+                         <p class="col-md-4 col-lg-3">Cantidad</p>
+                         <p class="col-3">Subtotal</p>
+                         <p class="col-md-3 col-lg-2">Quitar</p>
+                </article><!-- cierre contenedor B -->
+            </section><!--cierre fila detalles -->
+
+                <!-- fila 2 -->
+            <section class="filaProducto col-12 "><!-- fila producto -->
+                <div class="row">
+                <article class="col-8 col-md-6 col-lg-6" id="contenedorA">
+                    <div class="col-12 col-md-5">
+                        <img class="col-12" src="/images/solarisAZULsimple.png" alt="">
+                    </div>
+                    <div class="col-12 col-md-7">
+                        <h3 class="col-12 nombre">Nombre</h3>
+                        <h5 class="col-12 descripcion">Descripcion del producto </h5>
+                        <ul>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                        </ul>
+                       
+                    </div>
+                </article><!-- cierre contenedor A -->
+                <article class="col-4 col-md-6 col-lg-6" id="contenedorB">
+                <!-- precio -->
+                    <article class="col-12 col-md-5 col-lg-4 precio" id="item">
+                        <div class="col-12">
+                        <h5>Precio</h5>
+                        <span>$6544</span>
+                        </div>
+                    </article>
+                <!-- cantidad -->
+                    <article class="col-12 col-md-4 col-lg-3 cantidad" id="item">
+                        <input type="number" value="1">
+
+                    </article>
+
+                <!-- subtotal -->
+                    <article class="col-12 col-md-12 col-lg-3 subtotal" id="item">
+                        <div class="col-12 sub">
+                        <p>subtotal</p>
+                        </div>
+                    </article>
+
+                <!-- quitar -->
+                     <article class="col-md-3 col-lg-2 quitar" id="item">
+                        <div>
+                        <button type="reset"><svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-trash" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                            <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4L4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                        </svg></button>
+                        </div>
+
+                     </article>
+                
+
+                </article><!-- cierre contenedor B -->
+                </div><!-- cierre fila 2 -->
+            </section><!-- cierre fila producto -->
+    </section><!-- cierre contenedor fila 1 y fila 2  y precio-->    
+
+          <!-- ////////////////// CAJA 2 /////////////////////-->
+    <section class="col-12 col-lg-4 caja precio"><!-- contenedor precio y comprar -->
+            
+
+    </section><!-- cierre caja precio y comprar --> 
+        
+
+
+  <!-- ////////////////// CAJA 3 /////////////////////-->
+    <section><!-- caja contenedora mas productos / ofertas-->
+        <article class="contenedor producto">
+            <div class="contenedor imagen">
+
+            </div>
+            <div class="contenedor precio">
+
+            </div>
+            <div class="contenedor añadir al carrito"> 
+
+            </div>
+
+        </article><!-- cierre contenedor producto -->
+    </section><!-- caja contenedora mas productos -->
+    </div>
+</form>
 </main>
+
 
 <%- include("./partials/footer") %> <!-- FOOTER -->
