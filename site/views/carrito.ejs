@@ -5,15 +5,20 @@
 <main class="container-fluid "id="carrito">
     <form class="container carrito" >
     <div class="row">
-
+                <!--titulo de la sección-->
+                <div class="titulo col-12">
+                    <h1>
+                        Estos son tus productos seleccionados
+                    </h1>
+                </div>
         <!-- ////////////////// CAJA 1 /////////////////////-->
-    <section class="col-12 col-lg-9 barra"><!-- contenedor fila 1  fila 2  y precio-->
+    <section class="col-12 col-md12 col-lg-8 barra"><!-- contenedor fila 1  fila 2  y precio-->
         
                  <!-- fila 1 -->
             <section class="filaDetalles col-12"><!-- fila detalles-->
                 <article class="col-12 col-md-6 col-lg-6" id="contenedorA">
                          <p class="col-12 col-md-5">Producto</p>
-                         <p class="col-12 col-md-7">Descripcion</p>
+                         <p class="col-12 col-md-7">Nombre</p>
                 </article><!-- cierre contenedor A -->
                 <article class="col-md-6 col-lg-6" id="contenedorB">
                          <p class="col-md-5 col-lg-4">Precio unidad</p>
@@ -27,39 +32,32 @@
             <section class="filaProducto col-12 "><!-- fila producto -->
                 <div class="row">
                 <article class="col-8 col-md-6 col-lg-6" id="contenedorA">
-                    <div class="col-12 col-md-5">
+                    <div class="col-12 col-md-5 cajaImg">
                         <img class="col-12" src="/images/solarisAZULsimple.png" alt="">
                     </div>
-                    <div class="col-12 col-md-7">
-                        <h3 class="col-12 nombre">Nombre</h3>
-                        <h5 class="col-12 descripcion">Descripcion del producto </h5>
-                        <ul>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                        </ul>
-                       
+                    <div class="col-12 col-md-7 cajaDescripcion">
+                        <h5 class="col-12 nombre">Nombreaa adsas ds</h5>                       
                     </div>
                 </article><!-- cierre contenedor A -->
                 <article class="col-4 col-md-6 col-lg-6" id="contenedorB">
                 <!-- precio -->
-                    <article class="col-12 col-md-5 col-lg-4 precio" id="item">
-                        <div class="col-12">
+                    <article class="col-12 col-md-5 col-lg-5 precio" id="item">
+                        
                         <h5>Precio</h5>
-                        <span>$6544</span>
-                        </div>
+                        <span class="col-12 col-md-12">$65000</span>
+                        
                     </article>
                 <!-- cantidad -->
-                    <article class="col-12 col-md-4 col-lg-3 cantidad" id="item">
+                    <article class="col-12 col-md-4 col-lg-1 cantidad" id="item">
                         <input type="number" value="1">
 
                     </article>
 
                 <!-- subtotal -->
-                    <article class="col-12 col-md-12 col-lg-3 subtotal" id="item">
-                        <div class="col-12 sub">
-                        <p>subtotal</p>
-                        </div>
+                    <article class="col-12 col-md-12 col-lg-4 subtotal" id="item">
+                      
+                        <span class="col-12">$30000</span>
+                        
                     </article>
 
                 <!-- quitar -->
@@ -77,33 +75,171 @@
                 </article><!-- cierre contenedor B -->
                 </div><!-- cierre fila 2 -->
             </section><!-- cierre fila producto -->
-    </section><!-- cierre contenedor fila 1 y fila 2  y precio-->    
+    </section><!-- cierre contenedor fila 1 y fila 2  y precio--> 
 
-          <!-- ////////////////// CAJA 2 /////////////////////-->
-    <section class="col-12 col-lg-4 caja precio"><!-- contenedor precio y comprar -->
+    <!-- ////////////////// CAJA2 /////////////////////-->
+    <section class="col-12 col-md-12 col-lg-8 descripcion">
+        <article>
+            <h6>Descripcion</h6>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis magni numquam doloribus, voluptatem tempore commodi!</p>
+        </article>
+    </section>
+
+          <!-- ////////////////// CAJA 3 /////////////////////-->
+    <section class="col-12 col-md-12 col-lg-3 contenedorCajaCompra"><!-- contenedor precio y comprar -->
+        <section class="col-12 cajaCompra">
+                <article class="cajaSubtotal">
+                    <div class="">
+                        <p class="col-6">subtotal</p>
+                    </div>
+                    <div>
+                        <span class="col-6">$6565</span>
+                    </div>
+                </article>
+                <article class="cajaTotal">
+                    <div class="">
+                        <p class="col-6">Total general</p>
+                    </div>
+                    <div>
+                        <span class="col-6">$6565</span>
+                    </div>
+                </article>
+                <button type="button" class="btn btn-danger">Completar compra</button>
+           
+
+        </section>
+
             
 
     </section><!-- cierre caja precio y comprar --> 
-        
 
-
-  <!-- ////////////////// CAJA 3 /////////////////////-->
-    <section><!-- caja contenedora mas productos / ofertas-->
-        <article class="contenedor producto">
-            <div class="contenedor imagen">
-
-            </div>
-            <div class="contenedor precio">
-
-            </div>
-            <div class="contenedor añadir al carrito"> 
-
-            </div>
-
-        </article><!-- cierre contenedor producto -->
-    </section><!-- caja contenedora mas productos -->
     </div>
 </form>
+  <!-- ////////////////// CAJA 4 /////////////////////-->
+  <section class="container ofertas">
+
+    <!--caja que contiene productos oferta-->
+    <div class="row productos">
+
+        <!--titulo de la sección ofertas-->
+        <div class="titulo col-12">
+            <h3>
+                ¿Te gustaria agregar algo mas a tu carrito?
+            </h3>
+        </div>
+        <!--caja de la grilla de bootstrap-->
+        <div class="col-12 col-md-6 col-lg-3">
+
+            <!--caja que muestra la información del producto-->
+            <div class="contenido">
+
+                <!--ETIQUETA SEMANTICA-->
+                <figure>
+                    <img src="/images/solarisAzulSimple.png" alt=" ">
+                </figure>
+
+                <!--informacion-->
+                <article class="info">
+                 <!--nombre del producto ??-->
+                 <p class="col-12">nombre producto </p>
+                    <!--precio-->
+                    <h2>$6545 </h2>
+                    <!--descuento-->
+                     <span>40 %OFF</span>
+                    <!--icono de envío-->
+                    <button type="">Agregar al carrito <i class="fas fa-plus-square"></i></button>
+                </article>
+
+                <!--finaliza contenido-->
+            </div>
+            <!--finaliza caja de grilla de boostrap-->
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+
+            <!--caja que muestra la información del producto-->
+            <div class="contenido">
+
+                <!--ETIQUETA SEMANTICA-->
+                <figure>
+                    <img src="/images/solarisAzulSimple.png" alt=" ">
+                </figure>
+
+                <!--informacion-->
+                <article class="info">
+                    <!--nombre del producto ??-->
+                    <p class="col-12">nombre producto </p>
+                       <!--precio-->
+                       <h2>$6545 </h2>
+                       <!--descuento-->
+                        <span>40 %OFF</span>
+                       <!--icono de envío-->
+                       <button type="">Agregar al carrito <i class="fas fa-plus-square"></i></button>
+                   </article>
+
+                <!--finaliza contenido-->
+            </div>
+            <!--finaliza caja de grilla de boostrap-->
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+
+            <!--caja que muestra la información del producto-->
+            <div class="contenido">
+
+                <!--ETIQUETA SEMANTICA-->
+                <figure>
+                    <img src="/images/solarisAzulSimple.png" alt=" ">
+                </figure>
+
+                <!--informacion-->
+                <article class="info">
+                    <!--nombre del producto ??-->
+                    <p class="col-12">nombre producto </p>
+                       <!--precio-->
+                       <h2>$6545 </h2>
+                       <!--descuento-->
+                        <span>40 %OFF</span>
+                       <!--icono de envío-->
+                       <button type="">Agregar al carrito <i class="fas fa-plus-square"></i></button>
+                   </article>
+
+                <!--finaliza contenido-->
+            </div>
+            <!--finaliza caja de grilla de boostrap-->
+        </div>
+        <div class="col-12 col-md-6 col-lg-3">
+
+            <!--caja que muestra la información del producto-->
+            <div class="contenido">
+
+                <!--ETIQUETA SEMANTICA-->
+                <figure>
+                    <img src="/images/solarisAzulSimple.png" alt=" ">
+                </figure>
+
+                <!--informacion-->
+                <article class="info">
+                    <!--nombre del producto ??-->
+                    <p class="col-12">nombre producto </p>
+                       <!--precio-->
+                       <h2>$6545 </h2>
+                       <!--descuento-->
+                        <span>40 %OFF</span>
+                       <!--icono de envío-->
+                       <button type="">Agregar al carrito <i class="fas fa-plus-square"></i></button>
+                   </article>
+
+                <!--finaliza contenido-->
+            </div>
+            <!--finaliza caja de grilla de boostrap-->
+        </div>
+        
+
+        <!--finaliza el div.row-->
+    </div>
+
+    <!--FINALIZA SECCCIÓN OFERTAS-->
+</section>
+
 </main>
 
 

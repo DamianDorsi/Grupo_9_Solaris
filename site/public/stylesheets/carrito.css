@@ -1,0 +1,311 @@
+/*----------------------------------------------------------------------------------- PAGINA CARRITO MOBILE */
+@media(min-width:0px){
+    .barra{
+      order: 0;
+    }
+    .carrito .titulo h1{
+        margin-top: 0;
+    }
+                    /* CAJA 1 */
+    .carrito .filaDetalles {
+      border-top: 1px solid var(--color-azulOscuro);;
+      border-bottom: 1px solid var(--color-azulOscuro);;
+      height: 35px;
+      margin-top: 10px;
+      color: blue;
+    }
+    #contenedorB, #contenedorA{
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      /* padding: 0; */
+    }
+    .filaDetalles p{
+      padding: 0;
+      text-align: center;
+      font-size: 1.1em;
+      color:var(--color-azulOscuro);
+    }
+    #carrito .filaDetalles{
+      display: none;
+      }
+    #carrito .filaProducto{
+      display: block;
+    }
+    #carrito .filaProducto img{
+    margin-top: 15px;
+    background-color: white;
+    border: 3px solid var(--color-azulOscuro);
+    }
+    #carrito .filaProducto h5{
+    text-align: center;
+    padding: 0;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    }
+    .filaProducto #contenedorB{
+    justify-content: center;
+    padding: 0;
+    }
+    #carrito .filaProducto .precio{
+    padding: 5px;
+    }
+    #carrito .filaProducto .precio span{
+    font-size: 2em;
+    display: inline;
+    padding: 0px;
+    text-align: left;
+    }
+    #carrito .filaProducto .precio h5{
+    /* font-size: 1.2em; */
+    text-align: left;
+    margin-top: 12px;
+    
+    } 
+    .filaProducto #contenedorB .subtotal{
+    display: none;
+    }
+    .filaProducto #contenedorB button{
+    text-decoration: none ;
+    background-color: transparent;
+    border: transparent;
+    /* margin-top: 130px; */
+    }
+    .filaProducto #contenedorB .cantidad{
+    text-align: left;
+    display: block;
+    }
+    .filaProducto #contenedorB .cantidad input{
+    /* display: inline; */
+    width: 50px;
+    }
+    .filaProducto #contenedorB .quitar{
+    text-align: left;
+    }
+    .filaProducto #contenedorB .quitar button{
+    font-size: 2em;
+    }
+                        /* CAJA 2 */ 
+    .descripcion{
+      order: 2;
+    }                     
+    #carrito .descripcion p{
+      padding-bottom: 7px;
+    border-bottom: 1px solid var(--color-azul);
+    
+    }
+    #carrito .descripcion h6{
+    margin-top: 10px;
+    background-color: var(--color-celeste);
+    color: white;
+    }
+                          /* CAJA 3 */
+    .contenedorCajaCompra{
+      border: 1px solid var(--color-celeste);
+      order:10;
+      padding: 10px;
+      margin-top: 20px;
+    
+    }
+    .cajaCompra .cajaSubtotal, .cajaTotal{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-bottom: solid 1px var(--color-celeste);
+    }
+    .contenedorCajaCompra button{
+      width: 100%;
+    }
+    /* CAJA 4 */
+    .ofertas{
+      order: 100;
+      margin-top: 20px;
+    }
+    
+    .productos {
+      display: flex;
+      flex-wrap: wrap;
+      order: 100;
+    }
+    
+     section .productos .titulo h3, #carrito h1 {
+      text-align: center;
+      /* font-size: 24px; */
+      color: var(--color-azul);
+      padding: 20px;
+    }
+    
+     section .productos .contenido {
+      background-color: white;
+      margin-bottom: 30px;
+      border-radius: 5px;
+      padding: 5px;
+      text-align: center;
+    }
+    
+     section .productos .contenido figure img {
+      width: 90%;
+    }
+    
+    section .productos .info {
+      display: flex;
+      flex-wrap: wrap;
+      border-top: 1px solid var(--color-azulOscuro);
+      padding: 20px;
+      position: relative;
+      justify-content: center;
+     /*  height: 150px; */
+    }
+    
+     section .productos article span {
+      color: var(--color-azul);
+      display: flex;
+      align-items: center;
+      margin-left: 10px;
+    }
+    
+    
+    section .productos article button {
+      color: var(--color-azul);
+      background-color: white;
+      border: 1px solid var(--color-azul);
+      padding: 5px;
+      border-radius: 5%;
+      font-size: 24px;
+      position: relative;
+      justify-content: center;
+    }
+    
+    
+    
+    }/*----------------------------------------------------------------------------------- CIERRE CARRITO MOBILE */
+    /*------------------------------------------------------------------------------------------- CARRITO TABLET */
+    @media(min-width:768px){
+      #carrito{
+        padding-left: 0px;
+      }
+      #carrito .filaDetalles {
+        display: flex;
+        }
+      #carrito .filaProducto{
+          display: flex;
+        }
+      .filaDetalles #contenedorA{
+        margin-right: 18px;
+        margin-top: 3px;
+      }
+      #carrito .filaDetalles #contenedorB{
+        margin-top: 3px;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      #carrito .filaDetalles #contenedorB p{
+        text-align: center;
+        
+      }
+    
+      #carrito .filaDetalles #contenedorB p:nth-child(3){
+        display:none
+      }
+    
+      .filaProducto #contenedorA{
+        align-items: center;
+    
+      }
+      .filaProducto #contenedorA .cajaImg{
+    
+        flex-wrap: wrap;
+      }
+      .filaProducto #contenedorA div{
+        margin-top: 10px;
+      }
+      .filaProducto #contenedorB {
+        margin-top: 15px;
+        text-align: center;
+        align-items: center;
+        padding-left: 15px;
+      }
+      #carrito .filaProducto .precio h5{
+        display: none;
+      }
+      .filaProducto #contenedorB #item{
+        padding: 0px;
+        align-items: center;
+      }
+      #carrito .filaProducto .precio{
+        padding: 5px;
+        
+        }
+      #carrito .filaProducto .precio span{
+          font-size: 1.8em;
+          display: flex;
+          padding: 15px ;
+          margin-top: 0px;
+          
+        }
+        #carrito .filaProducto .cantidad{
+          text-align: center;
+        }
+        .filaProducto #contenedorB .quitar{
+         text-align: center;
+        }
+        /* caja 2 */
+        #carrito .descripcion{
+          margin-top: 10px;
+        }           
+      
+      
+    
+    }/*-----------------------------------------------------------------------------------CIERRE CARRITO TABLET */
+    /*----------------------------------------------------------------------------------------- CARRITO DESKTOP */
+    @media(min-width:1024px) {
+    /* caja 1 */
+      #carrito .filaDetalles #contenedorB p:nth-child(3){
+        display:flex;
+        justify-content: center;
+      }
+      #carrito .filaDetalles #contenedorB p{
+        text-align: center;
+      }
+      .barra{
+        padding-right: 0px;
+        margin-top: 10px;
+     
+      }
+      .filaProducto #contenedorA{
+        padding: 0 5px;
+        margin-top: 15px;
+      }  
+      .filaProducto #contenedorB .precio{
+        padding: 0;
+      }
+      .filaProducto #contenedorB .subtotal{
+        display: flex;
+        padding: 0px;
+      }
+      .filaProducto #contenedorB .subtotal span{
+      margin-left: 15px;
+        padding: 0px;
+      }
+          /* caja 2 */
+          #carrito .descripcion{
+            padding-right: 0px;
+          } 
+                            /* CAJA 3 */
+    .contenedorCajaCompra{
+      order:1;
+    /* margin-right: -10px; */
+    }
+              /* caja 4 */
+    section .productos article h2 {
+      font-size: 1.9rem;
+    }
+    section .productos .info {
+    justify-content: center;
+    }
+    
+    
+    
+    
+    
+    }/*---------------------------------------------------------------------------------------- CARRITO DESKTOP */

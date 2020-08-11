@@ -1,0 +1,366 @@
+/* COLORES */
+:root{
+    --color-azulOscuro: #1b262c;
+    --color-azul: #0f4c75;
+    --color-celeste: #3282b8;
+    --color-celesteCLaro: #bbe1fa;
+    --color-grisClaro: #ebebeb;
+    --color-grisOscuro: #666666;
+  
+  }
+  /* GENERAL */
+  *{
+    box-sizing: border-box;
+    margin: 0;
+  }
+  body{
+    background-color: var(--color-celesteCLaro);
+  }
+  a{
+    text-decoration: none;
+    color: var(--color-celesteCLaro);
+    font-size: 16px;
+  }
+  
+  a:hover{
+    color: white;
+    text-decoration: none;
+  }
+  
+  li{
+    list-style: none;
+  }
+  /* -------------------------------------HEADER MOBILE FIRST------------------------- */
+  /* CABECERA */
+  header{
+    background-color: var(--color-azul);
+    padding: 10px 0;
+    width: 100%;
+  }
+  .fondo{
+    height: 7vh;
+    background-color: rgba(8, 8, 8, 0.493);
+    z-index: 0;
+    position: absolute;
+    margin-top: 5vh;
+    width: 101%;
+    margin-left: -19px;
+  }
+  .row{
+    position: relative;
+    justify-content: space-between;
+  }
+  .redes{
+    display: none;
+    z-index: 5;
+  }
+  /* LOGO */
+  header .logo{
+    margin: -15px auto;
+    text-align: center;
+   /*  margin-bottom: 15px; */
+  
+  }
+  header .logo img{
+    padding: 0px;
+    height: 20vh;
+  }
+  /* NAVBAR */
+  .navBar{
+    order:0;
+  }
+  .navBar li{
+    margin: 5px 0;
+  }
+  header nav {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  header nav button.burger {
+    color: var(--color-celesteCLaro);
+    background-color: var(--color-celeste);
+    border: none;
+    border-radius: 4px;
+    padding: 3px 15px;
+    margin-bottom: 5px;
+  }
+  .menu .opciones{
+    background-color: var(--color-celesteCLaro);
+  }
+  .menu .opciones a{
+      font-size: 1em;
+  }
+  /* button:focus{
+    border: none;
+    outline: none;
+  } */
+  
+  /* BUSCADOR */
+  header .buscador{
+  width: 100%;
+  padding-right: 0;
+  }
+  header form {
+    right: 0px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+    padding-right: 0;
+  }
+  header form input {
+    border: solid 1px var(--color-grisClaro);
+    display: block;
+    width: 100%;
+    padding: 7px 0px 7px 7px;
+    border-radius: 5px;
+    height: 30px;
+    font-size: 1.5em;
+    font-family: inherit;
+    right: 0px;
+  }
+  
+  header form input:focus,
+  form button:focus {
+    outline: none;
+    background-color: rgb(190, 190, 190)
+  }
+  
+  header form button {
+    position: absolute;
+    right: 2px;
+    height: 90%;
+    background-color: white;
+    border: none;
+    border-left: solid 1px var(--color-grisClaro);
+    color: var(--color-grisOscuro);
+    cursor: pointer;
+  }
+  /* CartBar */
+  .cartBar{
+    order:3;
+    padding-left: 0px;
+  }
+  .cartBar .menu2{
+    justify-content: flex-end;
+    text-align: right;
+  }
+  .cartBar .menu2 li {
+  margin: 5px 0;
+  }
+  .cartBar ul li .icon{
+    display: none;
+  }/* -------CIERRE HEADER MOBILE----- */
+  
+  /*-------------HOME MOVILE FIRST-------------*/
+  .containerFluidHome{
+    padding: 0px 0px;
+  }
+  
+  section .rowHome{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: var(--color-celesteCLaro);
+  }
+  
+  section .tituloHome h2{
+    color: var(--color-azulOscuro);
+    font-size: 22px;
+    text-align: center;
+  }
+  
+  .contenidoHome{
+    margin-top: 10px;
+  }
+  
+  .contenidoHome img{
+    margin-left: 40px;
+  }
+  
+  .contenidoHome span{
+    color: green;
+  
+  }
+  
+  .contenidoHome h2{
+    margin-left: 10px;
+  }
+  
+  .contenidoHome p{
+    margin-left: 10px;
+  }
+  
+  /* TABLET */
+@media(min-width:768px){
+    /* -----------------------------------HEADER TABLET---------------------------- */
+    /* ICONOS REDES SOCIALES */
+  .redes{
+    display: flex;
+    position: absolute;
+    top: -1px;
+    left: 14%;
+    width: 500px;
+  }
+  .redes li a{
+    margin-right: 10px;
+    font-size: 1.5em;
+  }
+  .redes li a .face:hover{
+    color: white;
+    /* color: #3b5998; */
+  }
+  .redes li a .insta:hover{
+    color: #8a3ab9;
+  }
+  .redes li a .tw:hover{
+    color: #00acee;
+  }
+  .redes li a .yt:hover{
+    color: #c4302b;
+  }
+  /* ICONOS INFO CONTACTO SUCURSALES */
+  .infoRedes{
+display: none;
+  }
+  /* LOGO */
+  header .logo img{
+    margin-left: -45px;
+    height: 20vh;
+  }
+  /* NAVBAR MENU1 */
+  header .navBar{
+    order:0;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  header .menu {
+    margin-left: 3px;
+  }
+  header .menu ul li {
+    justify-content: space-between;
+    margin-left: -15px;
+  }
+  header  .menu ul li a{
+    font-size: 1.50em;
+  }
+  .menu .opciones a{
+    font-size: 1.2em;
+}
+  /* NAVBAR MENU2 USER */
+  .cartBar #navbarSupportedContent{
+    display: flex;
+   justify-content: flex-end;
+   margin-top: -25px;
+  }
+  .cartBar ul li .entero{
+    display: none;
+  }
+  .cartBar ul li .icon{
+    display: flex;
+    font-size: 1.2em;
+  }
+  header .menu2 ul li {
+    justify-content: space-between;
+    padding-right: 20px;
+  }
+  header .menu2 ul li:last-child{
+    padding-right: 50px;
+  }
+
+/* BUSCADOR */
+header .contenedorBuscador{
+  padding: 0px;
+  display: flex;
+  justify-content: center;
+  order:2 ;
+  width: 200px;
+  padding-bottom: 5px;
+}
+
+.buscador form{
+  width: 330px;
+  margin: -25px 15px 0 0;
+
+  
+}/* -----------CIERRE HEAD TABLET -------------*/
+
+/*---------------INICIO HOME TABLET-----------*/
+
+section .rowHome{
+  display: flex;
+  flex-wrap: wrap;
+}
+}
+
+/* DESKTOP */
+@media(min-width:1024px) {
+  /* -----------------------------------HEADER DESKTOP---------------------------- */
+    /* ICONOS REDES SOCIALES */
+  .redes{
+    left: 9.8%;
+    top: -1px;
+    width: 100%;
+  }
+  /* ICONOS INFO CONTACTO SUCURSALES */
+  .infoRedes{
+    display: flex;
+    position: absolute;
+    right: 10.5%;
+    font-size: 0.75em;
+  }
+  /* NAVBAR MENU1 */
+  header .menu{
+    margin-left: 20px;
+  }
+  header .menu ul li {
+    justify-content: space-between;
+    padding-right: 20px;
+  }
+  header  .menu ul li a{
+    font-size: 1.83em;
+  }
+  .menu .opciones a{
+    font-size: 1.5em;
+}
+    /* NAVBAR MENU2 */
+    header .cartBar{
+      order:22;
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: -2px;
+    }
+    nav .usuario{
+      margin-right: -50px;
+
+    }
+    header .menu2 ul li {
+      justify-content: space-between;
+      padding-right: 30px;
+    }
+    header .menu2 ul li i{
+      margin-left: 10px;
+      margin-top: 5px;
+    }
+    .cartBar ul li .entero{
+      display: flex;
+      font-size: 1.2em;
+    }
+    .cartBar ul li .icon{
+      display: none;
+      font-size: 1.5em;
+    }
+    /* BUSCADOR */
+  header .contenedorBuscador{
+  display: flex;
+  align-items: center;
+  padding-bottom: 0px;
+}
+.buscador form{
+  width: 80%;
+margin-top: -12px;
+}
+}/* ------CIERRE HEADER DESKTOP---------- */
+  
