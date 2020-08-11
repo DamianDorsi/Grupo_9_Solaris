@@ -1,0 +1,63 @@
+.login{
+    width: 100%;
+}
+.login .cajaPrincipal{
+    margin: 15px;
+    border: 1px solid var(--color-azul);
+}
+.login h1 , h2{
+    text-align: center;
+    /* font-size: 24px; */
+    color: var(--color-azul);
+    padding: 20px;
+    padding-top: 0;
+    margin-top: 10px;
+  }
+.login article{
+    text-align: center;
+}
+.login article input, button{
+    font-size: 15px;
+    border-radius: 5px;
+    border: none;
+    padding: 5px;
+    margin: 5px 0;
+}
+.login article i{
+    font-size: 35px;
+    color: var(--color-azul);
+    padding: 0 12px;
+}
+.login .datos{
+    display: block;
+}
+.login .recuerdame{
+text-align: center;
+   
+}
+.login article a{
+    text-decoration: dashed;
+    color: brown;
+    text-align: left;
+}
+.login button{
+    margin: 15px 0 30px 15px;
+    padding:5px;
+    color: white;
+    background-color: var(--color-azul);
+
+}
+.login .registro{
+    border-top: 5px solid var(--color-celeste);
+    margin: 0 15px;
+}
+@media(min-width:768px){
+.login{
+    width: 60%;
+}
+}/* Cierre media tablet */
+@media(min-width:1024px){
+    .login{
+        width: 50%;
+    }
+}
