@@ -152,6 +152,47 @@ margin: 5px 0;
   display: none;
 }/* -------CIERRE HEADER MOBILE----- */
 
+/*-------------HOME MOVILE FIRST-------------*/
+.containerFluidHome{
+  padding: 0px 0px;
+}
+
+section .rowHome{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--color-celesteCLaro);
+}
+
+section .tituloHome h2{
+  color: var(--color-azulOscuro);
+  font-size: 22px;
+  text-align: center;
+}
+
+.contenidoHome{
+  margin-top: 10px;
+}
+
+.contenidoHome img{
+  margin-left: 40px;
+}
+
+.contenidoHome span{
+  color: green;
+
+}
+
+.contenidoHome h2{
+  margin-left: 10px;
+}
+
+.contenidoHome p{
+  margin-left: 10px;
+}
+
+
+
+
 /*----------------------------------------------------------------------------------- PAGINA CARRITO MOBILE */
   #carrito{
     background-color: var(--color-celesteCLaro);
@@ -344,6 +385,14 @@ header .contenedorBuscador{
 
   
 }/* -----------CIERRE HEAD TABLET -------------*/
+
+/*---------------INICIO HOME TABLET-----------*/
+
+section .rowHome{
+  display: flex;
+  flex-wrap: wrap;
+}
+
 
 /* DESKTOP */
 @media(min-width:1024px) {
