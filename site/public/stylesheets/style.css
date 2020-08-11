@@ -557,6 +557,42 @@ h1{/* H1 DE REFERENCIA BORRAR DESPUES */
 
 /* CIERRE DE MAIN */
 
+#cargaProducto{
+
+  background-color: var(--color-celesteCLaro);
+    height: 100vh;
+    font-size: small; 
+    padding-top: 10px;
+    
+}
+
+@media(min-width:768px){
+  #cargaProducto{
+
+    background-color: var(--color-celesteCLaro);
+    width: 100%;
+      height: 100vh;
+      font-size: medium; 
+      padding-top: 10px;
+      padding-left: 200px;
+  }
+  #botonesFinales{
+    padding-left: 40px;
+  }
+}
+@media(min-width:1024px) {
+  #cargaProducto{
+
+    background-color: var(--color-celesteCLaro);
+    width: 100%;
+      height: 100vh;
+      font-size: large; 
+      padding-top: 20px;
+      padding-left: 300px;
+  }
+}
+
+
 
 /* ------------------------------------------------FOOTER  MOBILE FIRST----------------------------------*/
 

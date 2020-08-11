@@ -2,7 +2,55 @@
 <%- include("./partials/header") %> <!-- HEADER -->
 
 <!-- ACA EL CODIGO -->
-<main>
-<h1>PAGINA AGREGAR PRODUCTO</h1>
+<main class="container-fluid" id="cargaProducto">
+    <div class="row">
+        <div class="col12">
+            <form id="furmularioCarga" class="col4">
+                <div class="form-group" id="nombreProducto">
+                  <label for="exampleFormControlInput1">Nombre del producto</label>
+                  <input type="text" class="form-control" id="exampleFormControlInput1" required>
+                  <div class="invalid-feedback">
+                    Por favor ingrese el nombre del
+                  </div>
+                </div>
+                <div class="form-group" id="precio">
+                    <label for="exampleFormControlInput1">Precio del producto</label>
+                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                  </div>
+                  <div class="form-group" id="stock">
+                    <label for="exampleFormControlInput1">Indique el stock disponible</label>
+                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="">
+                  </div>
+                <div class="form-group" id="categorias">
+                  <label for="exampleFormControlSelect1">Seleccione una categoria</label>
+                  <select class="form-control" id="exampleFormControlSelect1">
+                    <option>Guitarras</option>
+                    <option>Bajos</option>
+                    <option>Baterias</option>
+                    <option>Accesorios</option>
+                  </select>
+                </div>
+                <div class="form-group" id="descripcion">
+                  <label for="exampleFormControlTextarea1">Ingrese una descripcion del producto</label>
+                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <form>
+                    <div class="form-group" id="subirImagen">
+                      <label for="exampleFormControlFile1">Seleccione una imagen del producto</label>
+                      <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                    </div>
+                  </form>
+                  <div class="row">
+                  <div class="col6" id= "botonesFinales">
+                  <button class="btn btn-primary" type="submit">Publicar producto</button>
+    
+                  <button class="btn btn-primary" type="submit">Cancelar</button>
+                    </div>
+
+                  </div>
+              </form>
+        </div>
+    </div>
+</div>
 </main>
 <%- include("./partials/footer") %> <!-- FOOTER -->
