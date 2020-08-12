@@ -185,9 +185,9 @@
   }
   
   .contenidoHomeDestacado img{
-    margin-left: 40px;
-    width: 50%;
-    margin-top: 8px;
+    width: 80%;
+    margin-top: 15px;
+    margin-left: 15px;
   }
   
   .contenidoHomeDestacado span{
@@ -304,6 +304,8 @@ section .rowHome{
   display: flex;
   flex-wrap: wrap;
 }
+
+
 }
 
 /* DESKTOP */
