@@ -3,10 +3,19 @@
     background:var(--color-azul);
     color: white;
   }
+  h4{
+    font-size: 20px;
+    padding-top: 25px;
+  }
   .footer .links ul {
     list-style-type: none;
   }
+  .footer .links li{
+    display: inline;
+    padding-left: 8px;
+  }
   .footer .links li a {
+    font-size: 15px;
     color: white;
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
@@ -15,10 +24,14 @@
     text-decoration: none;
     color: #4180cb;
   }
+  .footer .about-company h2{
+    color: white;
+  }
   .footer .about-company i {
-    font-size: 25px;
+    font-size: 10px;
   }
   .footer .about-company a {
+    font-size: 10px;
     color: white;
     -webkit-transition: color 0.2s;
     transition: color 0.2s;
@@ -26,10 +39,62 @@
   .footer .about-company a:hover {
     color: #4180cb;
   }
+
+  .footer .location{
+    padding-top: 15px;
+  }
   .footer .location i {
-    font-size: 18px;
+    font-size: 15px;
   }
   .footer .copyright p {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
   }
-  /* CIERRE DE FOOTER */
+  /* CIERRE DE FOOTER - MOBILE */
+
+  /* FOOTER TABLET*/
+
+  @media(min-width:768px){
+    .footer .about-company {
+      font-size: 20px;
+    }
+    .footer .links a{
+      font-size: 25px;
+    }
+    .footer .links li{
+      display: block;
+      padding-top: 5px;
+    }
+
+  }
+  /* CIERRE FOOTER TABLET*/
+
+  /* FOOTER 1024*/
+  @media(min-width:1024px){
+    .footer .about-company {
+      text-align: justify;
+      font-size: 20px;
+    }
+    .footer .links a{
+      font-size: 25px;
+    }
+    .footer .links li{
+      font-size: 20px;
+      display: block;
+    }
+    .footer .links li a {
+      font-size: 20px;
+      color: white;
+      -webkit-transition: color 0.2s;
+      transition: color 0.2s;
+    }
+    h4{
+      font-size: 25px;
+      padding-top: 10px;
+    }
+    .footer .location{
+      font-size: 20px;
+      padding-top: 0px;
+    }
+  
+  }
+/* CIERRE FOOTER 1024*/
