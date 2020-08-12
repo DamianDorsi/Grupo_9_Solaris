@@ -1,0 +1,75 @@
+[
+ {
+  "id": 1,
+  "name": "Guitarra 1",
+  "price": 100,
+  "discount": 60,
+  "category": "oferta",
+  "description": "descripcion guitarra 1",
+  "image": ""
+ },
+ {
+  "id": 2,
+  "name": "Guitarra 2",
+  "price": 100,
+  "discount": 3,
+  "category": "destacado",
+  "description": "descripcion guitarra 2",
+  "image": ""
+ },
+ {
+  "id": 3,
+  "name": "Bajo 1",
+  "price": 200,
+  "discount": 55,
+  "category": "oferta",
+  "description": "descripcion bajo 1",
+  "image": ""
+ },
+ {
+  "id": 4,
+  "name": "Bajo 2",
+  "description": "descripcion bajo 2",
+  "price": 200,
+  "discount": 1,
+  "image": "",
+  "category": "destacado"
+ },
+ {
+  "id": 5,
+  "name": "Bateria 1",
+  "description": "descripcion bateria 1",
+  "price": 300,
+  "discount": 65,
+  "image": "",
+  "category": "oferta"
+ },
+ {
+  "id": 6,
+  "name": "Bateria 2",
+  "description": "descripcion bateria 2",
+  "price": 300,
+  "discount": 12,
+  "image": "",
+  "category": "destacados"
+ },
+ {
+  "id": 7,
+  "name": "Accesorio 1",
+  "description": "descripcion accesorio 1",
+  "price": 400,
+  "discount": 57,
+  "image": "",
+  "category": "oferta"
+ },
+ {
+  "id": 8,
+  "name": "Accesorio 2",
+  "description": "descripcion accesorio 2",
+  "price": 400,
+  "discount": 2,
+  "image": "",
+  "category": "destacado"
+ }
+]
+ 
