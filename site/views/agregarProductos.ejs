@@ -2,24 +2,25 @@
 <%- include("./partials/header") %> <!-- HEADER -->
 
 <!-- ACA EL CODIGO -->
-<main class="container-fluid" id="cargaProducto">
+<main class="container-fluid" id="cargaProducto" spellcheck="true">
     <div class="row">
         <div class="col12">
             <form id="furmularioCarga" class="col4">
+              <div class="row">
                 <div class="form-group" id="nombreProducto">
                   <label for="exampleFormControlInput1">Nombre del producto</label>
                   <input type="text" class="form-control" id="exampleFormControlInput1" required>
                   <div class="invalid-feedback">
-                    Por favor ingrese el nombre del
                   </div>
                 </div>
                 <div class="form-group" id="precio">
                     <label for="exampleFormControlInput1">Precio del producto</label>
-                    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    <input type="number" class="form-control" id="exampleFormControlInput1"  min=0 oninput="validity.valid||(value='');">
                   </div>
+                </div>
                   <div class="form-group" id="stock">
                     <label for="exampleFormControlInput1">Indique el stock disponible</label>
-                    <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="">
+                    <input type="number" class="form-control" id="exampleFormControlInput1" min=0 oninput="validity.valid||(value='');" placeholder="">
                   </div>
                 <div class="form-group" id="categorias">
                   <label for="exampleFormControlSelect1">Seleccione una categoria</label>
@@ -43,8 +44,7 @@
                   <div class="row">
                   <div class="col6" id= "botonesFinales">
                   <button class="btn btn-primary" type="submit">Publicar producto</button>
-    
-                  <button class="btn btn-primary" type="submit">Cancelar</button>
+                  <button class="btn btn-primary" id = "cancelar" type="submit">Cancelar</button>
                     </div>
 
                   </div>
