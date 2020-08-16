@@ -1,27 +1,62 @@
 <%- include("./partials/head") %> <!-- HEAD -->
 <%- include("./partials/header") %> <!-- HEADER -->
 
-<!-- ACA EL CODIGO -->
-<main>
-    <div class="container">
-        <div class="slider">
-          <div class="row">
-            <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
-              <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="/images/producto01.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="/images/producto01.jpg" class="d-block w-100" alt="...">
-                </div>
-                <div class="carousel-item">
-                  <img src="/images/producto01.jpg" class="d-block w-100" alt="...">
-                </div>
-              </div>
-            </div>
-            </div>
-        </div>
-    </div>
-</main>
 
+<!-- SECCION NOVEDADES -->
+
+<div class="container">
+<section id="home">
+
+    <!--caja que contiene todos los productos de la ultima visita-->
+    <div class="row productos" >
+
+        <!--caja que contiene el titulo de la sección-->
+        <div class="titulo col-12">
+            <h2>
+                Estos son los resultados de "<%= buscar %>"
+            </h2>
+        </div>
+
+        <% producto.forEach(producto => { %>
+
+        <!--caja de la grilla de bootstrap-->
+        <div class="grilla col-12 col-md-6 col-lg-3">
+
+            <!--caja que muestra la información del producto-->
+            <div class="contenido">
+
+                <!--ETIQUETA SEMANTICA-->
+                <figure>
+                    <a href="/productos/detalle/<%= producto.id %> ">
+                        <img src="/images/productos/<%- producto.image %>  " alt=" ">
+                    </a>
+
+                </figure>
+
+                <!--informacion-->
+                <article>
+                    <!--precio-->
+                    <h2 class="col-12"><%= "$" +producto.price %> </h2>
+                    <!--descuento-->
+                    <% if (producto.discount == 0) { %>
+                        <span> <!-- sin ofertas --></span>
+                        <%}else {%>
+                            <span><%= producto.discount + "%OFF"%></span>
+                        <%}%>
+                    <!--nombre del producto ??-->
+                    <p class="col-12"><%= producto.name %> </p>
+                </article>
+
+                <!--finaliza contenido-->
+            </div>
+            <!--finaliza caja de grilla de boostrap-->
+        </div>
+        <% }) %>
+
+        <!--finaliza el div.row-->
+    </div>
+
+    <!--FINALIZA SECCCIÓN NOVEDADES-->
+</section>
+</div>
 <%- include("./partials/footer") %> <!-- FOOTER -->

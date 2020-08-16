@@ -1,0 +1,57 @@
+<%- include("./partials/head") %> <!-- HEAD -->
+<%- include("./partials/header") %> <!-- HEADER -->
+
+<!-- ACA EL CODIGO -->
+<main>
+    <div class="container">
+        <section class="detalleProducto">
+            <div class="row">
+                <div class="titulo col-12">
+                    <h2>
+                       <%= producto.name %> 
+                    </h2>
+                </div>
+                <div class="col-12">
+                    <div class="contenido">
+                        <div class="row">
+                            <div class="col-12 col-lg-8 Descripcion">
+                               <!--  <figure class="text-center"> -->
+                                   <figure>
+                                    <img src="/images/productos/<%= producto.image %>" class="img-fluid" alt="">
+                                </figure>
+                                <!-- </figure> -->
+                                <div class="titulo">
+                                    <h2>
+                                        Descripcion
+                                    </h2>
+
+                                </div>
+
+                                <p>
+                                    <%= producto.description %> 
+                                </p>
+                            </div>
+                            <div class="col-12 col-lg-4 text-left datos">
+                                <div>
+                                <h3>
+                                    <%= producto.name %> 
+                                </h3>
+                            </div>
+                                <% if (producto.discount!=0) { %>
+                                    <span><strike>$<%= producto.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %></strike>  / <strong> <%- producto.discount %> % OFF</strong>
+                                    </span>
+                                <% } %>
+                                <h2 class="precio"><%= (producto.price - producto.price * producto.discount/100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %></h2>
+
+                                <p><i class="fas fa-credit-card mr-3 my-4"></i>Pagá en 12 cuotas sin interés</p>
+                                <p><i class="fas fa-store mr-3 my-4"></i>Retiro gratis en nuestras sucursales</p>
+                                <button type="submit" class="btn btn-danger"><a href="/">Agregar al carrito</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</main>
+<%- include("./partials/footer") %> <!-- FOOTER -->

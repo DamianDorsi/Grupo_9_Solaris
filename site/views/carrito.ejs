@@ -7,9 +7,9 @@
     <div class="row">
                 <!--titulo de la sección-->
                 <div class="titulo col-12">
-                    <h1>
+                    <h2>
                         Estos son tus productos seleccionados
-                    </h1>
+                    </h2>
                 </div>
         <!-- ////////////////// CAJA 1 /////////////////////-->
     <section class="col-12 col-md12 col-lg-8 barra"><!-- contenedor fila 1  fila 2  y precio-->
@@ -105,6 +105,7 @@
                     </div>
                 </article>
                 <button type="button" class="btn btn-danger">Completar compra</button>
+                
            
 
         </section>
@@ -112,127 +113,58 @@
             
 
     </section><!-- cierre caja precio y comprar --> 
+    
 
     </div>
+    <button type="submit" class="btn btn-danger"><a href="/">Seguir comprando</a></button>
+    
 </form>
   <!-- ////////////////// CAJA 4 /////////////////////-->
-  <section class="container ofertas" id="ofertas">
+  <section class="container" id="home">
 
-    <!--caja que contiene productos oferta-->
+    <!--caja que contiene todos los productos de la ultima visita-->
     <div class="row productos">
 
-        <!--titulo de la sección ofertas-->
+        <!--caja que contiene el titulo de la sección-->
         <div class="titulo col-12">
-            <h3>
-                ¿Te gustaria agregar algo mas a tu carrito?
-            </h3>
+            <h2>
+                ¿Quiere agregar otro producto al carrito?
+            </h2>
         </div>
+
+        <% oferta.forEach(producto => { %>
+
         <!--caja de la grilla de bootstrap-->
-        <div class="col-12 col-md-6 col-lg-3 item">
+        <div class="grilla col-12 col-md-4 col-lg-2">
 
             <!--caja que muestra la información del producto-->
             <div class="contenido">
 
                 <!--ETIQUETA SEMANTICA-->
                 <figure>
-                    <a href=""><img class="img-fluid" src="/images/solarisAzulSimple.png" alt=" "></a>
+                    <a href="/products/detail/<%= producto.id %> ">
+                        <img src="/images/productos/<%- producto.image %>  " alt=" ">
+                    </a>
+
                 </figure>
 
                 <!--informacion-->
-                <article class="info">
-                 <!--nombre del producto ??-->
-                 <p class="col-12">nombre producto </p>
+                <article>
                     <!--precio-->
-                    <h2>$6545 </h2>
+                    <h2 class="col-12"><%= "$" + producto.price %> </h2>
                     <!--descuento-->
-                     <span>40 %OFF</span>
-                    <!--icono de envío-->
-                    <button type="">Agregar al carrito<i class="fas fa-plus-square"></i></button>
+                    <% if (producto.discount != 0) { %>
+                            <span><%=  producto.discount + "%OFF"%></span>
+                        <%}%>
+                    <!--nombre del producto ??-->
+                    <p class="col-12"><%= producto.name %> </p>
                 </article>
 
                 <!--finaliza contenido-->
             </div>
             <!--finaliza caja de grilla de boostrap-->
         </div>
-        <div class="col-12 col-md-6 col-lg-3 item">
-
-            <!--caja que muestra la información del producto-->
-            <div class="contenido">
-
-                <!--ETIQUETA SEMANTICA-->
-                <figure>
-                    <a href=""><img class="img-fluid" src="/images/solarisAzulSimple.png" alt=" "></a>
-                </figure>
-
-                <!--informacion-->
-                <article class="info">
-                    <!--nombre del producto ??-->
-                    <p class="col-12">nombre producto </p>
-                       <!--precio-->
-                       <h2>$6545 </h2>
-                       <!--descuento-->
-                        <span>40 %OFF</span>
-                       <!--icono de envío-->
-                       <button type="">Agregar al carrito <i class="fas fa-plus-square"></i></button>
-                   </article>
-
-                <!--finaliza contenido-->
-            </div>
-            <!--finaliza caja de grilla de boostrap-->
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 item">
-
-            <!--caja que muestra la información del producto-->
-            <div class="contenido">
-
-                <!--ETIQUETA SEMANTICA-->
-                <figure>
-                    <a href=""><img class="img-fluid" src="/images/solarisAzulSimple.png" alt=" "></a>
-                </figure>
-
-                <!--informacion-->
-                <article class="info">
-                    <!--nombre del producto ??-->
-                    <p class="col-12">nombre producto </p>
-                       <!--precio-->
-                       <h2>$6545 </h2>
-                       <!--descuento-->
-                        <span>40 %OFF</span>
-                       <!--icono de envío-->
-                       <button type="">Agregar al carrito <i class="fas fa-plus-square"></i></button>
-                   </article>
-
-                <!--finaliza contenido-->
-            </div>
-            <!--finaliza caja de grilla de boostrap-->
-        </div>
-        <div class="col-12 col-md-6 col-lg-3 item">
-
-            <!--caja que muestra la información del producto-->
-            <div class="contenido">
-
-                <!--ETIQUETA SEMANTICA-->
-                <figure>
-                    <a href=""><img class="img-fluid" src="/images/solarisAzulSimple.png" alt=" "></a>
-                </figure>
-
-                <!--informacion-->
-                <article class="info">
-                    <!--nombre del producto ??-->
-                    <p class="col-12">nombre producto </p>
-                       <!--precio-->
-                       <h2>$6545 </h2>
-                       <!--descuento-->
-                        <span>40 %OFF</span>
-                       <!--icono de envío-->
-                       <button type="">Agregar al carrito <i class="fas fa-plus-square"></i></button>
-                   </article>
-
-                <!--finaliza contenido-->
-            </div>
-            <!--finaliza caja de grilla de boostrap-->
-        </div>
-        
+        <% }) %>
 
         <!--finaliza el div.row-->
     </div>

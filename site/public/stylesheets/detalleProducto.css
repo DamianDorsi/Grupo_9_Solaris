@@ -1,0 +1,35 @@
+.detalleProducto h3{
+    margin-top: 20px;
+}
+.detalleProducto .precio{
+    font-size: 3em;
+}
+.detalleProducto span, .detalleProducto i{
+    color: green;
+    font-size: 1.5em;
+}
+.detalleProducto button{
+    border: 0;
+    color: white;
+    width: 100%;
+    border-radius: 8px;
+    padding: 12px;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+@media(min-width:1024px){
+    .detalleProducto figure{
+        text-align: center;
+    }
+    .detalleProducto img{
+        width: 80%;
+    }
+    .detalleProducto .datos{
+        border-left: 2px double var(--color-azul);
+      /*   background-color:rgba(5, 5, 5, 0.185); */
+    }
+    .detalleProducto .contenido{
+        padding-right: 15px;
+    }
+    
+}

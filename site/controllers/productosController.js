@@ -1,9 +1,12 @@
+const dbProduct = require("../data/database")
+
+
 module.exports={
-    producto:function(req, res, next) {
-        res.render('productos', { title: 'Productos' });
+    listar:function(req, res, next) {
+      res.render('Productos', { title: 'productos' });
       },
     agregar:function(req, res, next) {
-        res.render('agregarProductos', { title: 'Administracion' });
+        res.render('agregarProductos', { title: 'Agregar Producto' });
       },
     guitarras:function(req, res, next) {
         res.render('guitarras', { title: 'Guitarras' });
@@ -17,5 +20,14 @@ module.exports={
     accesorios:function(req, res, next) {
         res.render('accesorios', { title: 'Accesorios' });
       },
-
+    detalle:function(req,res){
+        let id = req.params.id;
+        let producto = dbProduct.filter(producto=>{
+            return producto.id == id
+        })
+        res.render("detalleProductos",{
+            title:"Detalle del producto",
+            producto:producto[0]
+        })
+}
 }

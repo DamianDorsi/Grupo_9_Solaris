@@ -1,135 +1,168 @@
 <%- include("./partials/head") %> <!-- HEAD -->
 <%- include("./partials/header") %> <!-- HEADER -->
 
-<!-- ACA EL CODIGO -->
+<!-- SECCION CARROUSEL -->
+<section id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
 
-
-<div class="container-fluid containerFluidHomeDestacado">
-  <div class="container containerHomeDestacado">
-    <section class="destacadoHome">
-      <div class="row rowHomeDestacado">
-
-        <div class="tituloHomeDestacado col-12" >
-          <h2>Productos destacados del mes!</h2>
+    <ol class="carousel-indicators">
+      <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      <li data-target="#carouselExampleCaptions" data-slide-to="3"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <a href="/productos/guitarras"><img src="/images/banner/bannerGuitarra.jpg" class="d-block w-100" alt="..."></a>
+        <div class="carousel-caption d-none d-md-block">
+            <a href="/productos/guitarras"><h5>GUITARRAS</h5></a>
+          <p></p>
         </div>
-
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="contenidoHomeDestacado">
-            <figure>
-              <img src="images/guitarraHome.jpg" alt="">
-            </figure>
-            <article>
-              <h2>$9999.99</h2>
-              <span>99% OFF</span>
-              <p>DESCRIPCION DE PRODUCTO</p>
-            </article>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="contenidoHomeDestacado">
-            <figure>
-              <img src="images/guitarraHome.jpg" alt="">
-            </figure>
-            <article>
-              <h2>$9999.99</h2>
-              <span>99% OFF</span>
-              <p>DESCRIPCION DE PRODUCTO</p>
-            </article>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="contenidoHomeDestacado">
-            <figure>
-              <img src="images/guitarraHome.jpg" alt="">
-            </figure>
-            <article>
-              <h2>$9999.99</h2>
-              <span>99% OFF</span>
-              <p>DESCRIPCION DE PRODUCTO</p>
-            </article>
-          </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="contenidoHomeDestacado">
-            <figure>
-              <img src="images/guitarraHome.jpg" alt="">
-            </figure>
-            <article>
-              <h2>$9999.99</h2>
-              <span>99% OFF</span>
-              <p>DESCRIPCION DE PRODUCTO</p>
-            </article>
-          </div>
-        </div>
-
-        <div class="tituloHomeDestacado col-12" >
-          <h2>Productos en OFERTA!</h2>
-        </div>
-
-        
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="contenidoHomeDestacado">
-            <figure>
-              <img src="images/guitarraHome.jpg" alt="">
-            </figure>
-            <article>
-              <h2>$9999.99</h2>
-              <span>99% OFF</span>
-              <p>DESCRIPCION DE PRODUCTO</p>
-            </article>
-          </div>
-        </div>
-
-        
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="contenidoHomeDestacado">
-            <figure>
-              <img src="images/guitarraHome.jpg" alt="">
-            </figure>
-            <article>
-              <h2>$9999.99</h2>
-              <span>99% OFF</span>
-              <p>DESCRIPCION DE PRODUCTO</p>
-            </article>
-          </div>
-        </div>
-
-        
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="contenidoHomeDestacado">
-            <figure>
-              <img src="images/guitarraHome.jpg" alt="">
-            </figure>
-            <article>
-              <h2>$9999.99</h2>
-              <span>99% OFF</span>
-              <p>DESCRIPCION DE PRODUCTO</p>
-            </article>
-          </div>
-        </div>
-
-        
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="contenidoHomeDestacado">
-            <figure>
-              <img src="images/guitarraHome.jpg" alt="">
-            </figure>
-            <article>
-              <h2>$9999.99</h2>
-              <span>99% OFF</span>
-              <p>DESCRIPCION DE PRODUCTO</p>
-            </article>
-          </div>
-        </div>
-
       </div>
-    </section>
-  </div>
-</div>
 
+      <div class="carousel-item">
+        <a href="/productos/baterias"><img src="/images/banner/bannerBateria.jpg" class="d-block w-100" alt="..."></a>
+        <div class="carousel-caption d-none d-md-block">
+            <a href="/productos/baterias"> <h5>BATERIAS</h5></a>
+          <p></p>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+        <a href="/productos/bajos"><img src="/images/banner/bannerBajo.jpg" class="d-block w-100" alt="..."></a>
+        <div class="carousel-caption d-none d-md-block">
+            <a href="/productos/bajos"><h5>BAJOS</h5></a>
+          <p></p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <a href="/productos/accesorios"><img src="/images/banner/bannerAccesorios.jpg" class="d-block w-100" alt="..."></a>
+        <div class="carousel-caption d-none d-md-block">
+            <a href="/productos/accesorios"><h5>ACCESORIOS</h5></a>
+          <p></p>
+        </div>
+      </div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+
+</section>
+
+<!-- caja contenedora main -->
+<main class="container">
+        <!-- SECCION NOVEDADES -->
+<section id="home">
+
+    <!--caja que contiene todos los productos de la ultima visita-->
+    <div class="row productos" >
+
+        <!--caja que contiene el titulo de la sección-->
+        <div class="titulo col-12">
+            <h2>
+                Novedades
+            </h2>
+        </div>
+
+        <% novedades.forEach(producto => { %>
+
+        <!--caja de la grilla de bootstrap-->
+        <div class="grilla col-12 col-md-6 col-lg-3">
+
+            <!--caja que muestra la información del producto-->
+            <div class="contenido">
+
+                <!--ETIQUETA SEMANTICA-->
+                <figure>
+                    <a href="/productos/detalle/<%= producto.id %> ">
+                        <img src="/images/productos/<%- producto.image %>  " alt=" ">
+                    </a>
+
+                </figure>
+
+                <!--informacion-->
+                <article>
+                    <!--precio-->
+                    <h2 class="col-12"><%= "$" +producto.price %> </h2>
+                    <!--descuento-->
+                    <% if (producto.discount == 0) { %>
+                        <span> <!-- sin ofertas --></span>
+                        <%}else {%>
+                            <span><%= producto.discount + "%OFF"%></span>
+                        <%}%>
+                    <!--nombre del producto ??-->
+                    <p class="col-12"><%= producto.name %> </p>
+                </article>
+
+                <!--finaliza contenido-->
+            </div>
+            <!--finaliza caja de grilla de boostrap-->
+        </div>
+        <% }) %>
+
+        <!--finaliza el div.row-->
+    </div>
+
+    <!--FINALIZA SECCCIÓN NOVEDADES-->
+</section>
+
+        <!--SECCIÓN: PRODUCTOS OFERTAS-->
+ <section id="home">
+
+          <!--caja que contiene todos los productos de la ultima visita-->
+          <div class="row productos">
+
+              <!--caja que contiene el titulo de la sección-->
+              <div class="titulo col-12">
+                  <h2>
+                      Ofertas destacadas
+                  </h2>
+              </div>
+
+              <% oferta.forEach(producto => { %>
+
+              <!--caja de la grilla de bootstrap-->
+              <div class="grilla col-12 col-md-4 col-lg-2">
+
+                  <!--caja que muestra la información del producto-->
+                  <div class="contenido">
+
+                      <!--ETIQUETA SEMANTICA-->
+                      <figure>
+                          <a href="/productos/detalle/<%= producto.id %> ">
+                              <img src="/images/productos/<%- producto.image %>  " alt=" ">
+                          </a>
+
+                      </figure>
+
+                      <!--informacion-->
+                      <article>
+                          <!--precio-->
+                          <h2 class="col-12"><%= "$" + producto.price %> </h2>
+                          <!--descuento-->
+                          <% if (producto.discount != 0) { %>
+                                  <span><%=  producto.discount + "%OFF"%></span>
+                              <%}%>
+                          <!--nombre del producto ??-->
+                          <p class="col-12"><%= producto.name %> </p>
+                      </article>
+
+                      <!--finaliza contenido-->
+                  </div>
+                  <!--finaliza caja de grilla de boostrap-->
+              </div>
+              <% }) %>
+
+              <!--finaliza el div.row-->
+          </div>
+
+          <!--FINALIZA SECCCIÓN OFERTAS-->
+ </section>
+</main>
 
 
 <%- include("./partials/footer") %> <!-- FOOTER -->
@@ -148,17 +181,3 @@
 
 
 
-
-
-
-
-
-
-
-
-<!--SRIPS BOOTSTRAP-->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js " integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj " crossorigin="anonymous "></script>
-  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js " integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo " crossorigin="anonymous "></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js " integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI " crossorigin="anonymous "></script>   
-</body>
-</html>

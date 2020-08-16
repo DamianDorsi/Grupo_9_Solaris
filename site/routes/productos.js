@@ -5,8 +5,9 @@ var router = express.Router();
 let Controller = require("../controllers/productosController")
 
 /* paginas de productos. */
-router.get('/', Controller.producto);
-router.get('/guitarras', Controller.guitarras);
+router.get('/', Controller.listar);
+router.get("/detalle/:id", Controller.detalle)
+router.get('/guitarras/:id?', Controller.guitarras);
 router.get('/bajos', Controller.bajos);
 router.get('/baterias', Controller.baterias);
 router.get('/accesorios', Controller.accesorios);
