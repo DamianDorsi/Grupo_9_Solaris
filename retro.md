@@ -8,7 +8,27 @@
 
 - **Empezar a hacer**: Decidimos empezar a realizar una revision en conjunto de los archivos antes de realizar una entrega, para asi lograr un proyecto mas homogeneo.
 
-- **Dejar de hacer**: Decidimos dejar de procastinar los temas para evitar tener confictos de ultimo minuto. 
+- **Dejar de hacer**: Decidimos dejar de procastinar los temas para evitar tener conflictos de ultimo minuto. 
 
 ## Tambien realizamos un "diagrama estrella" para definir los temas a mejorar:
-![](./sprints/diagramaEstrella.png)
+![](./sprints/diagramaEstrella.png)![](./sprints/diagramaEstrella.png)
+
+****************************************************************************************
+
+# Retrospectiva 2
+    Segunda retrospectiva de cara al proximo sprint.
+
+- **Seguir haciendo**: 
+    Division de trabajo en partes iguales.
+
+- **Hacer más**: 
+    Mejorar el tablero de Trello.
+
+- **Hacer menos**: 
+    Perder tiempo.
+
+- **Empezar a hacer**: 
+    Mejorar el enfoque en el proyecto.
+
+- **Dejar de hacer**:
+    Concideramos que no hay nada que dejar de hacer.
