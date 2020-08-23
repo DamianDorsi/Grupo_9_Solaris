@@ -11,7 +11,7 @@
 - **Dejar de hacer**: Decidimos dejar de procastinar los temas para evitar tener conflictos de ultimo minuto. 
 
 ## Tambien realizamos un "diagrama estrella" para definir los temas a mejorar:
-![](./sprints/diagramaEstrella.png)![](./sprints/diagramaEstrella.png)
+![](./sprints/diagramaEstrella.png)
 
 ****************************************************************************************
 
