@@ -2,9 +2,6 @@
  Somos una página orientada a la venta de instrumentos y componentes musicales. Apuntamos a todo público con o sin experiencia en el ámbito de la música, que desee adquirir nuestros productos. Proveyendo el asesoramiento necesario para lograr que el cliente queda satisfecho con su compra.
 
 ## Integrantes
-### Hector Alejandro Alfonzo
-- 24 años 
-- [ale.alfonzo996@gmail.com](ale.alfonzo996@gmail.com)
 
 ### Damián Dorsi
 - 27 años
