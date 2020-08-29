@@ -1,9 +1,9 @@
 @import "index.css";
 @import "carrito.css";
 @import "footer.css";
-@import "agregarProducto.css";
 @import "login.css";
 @import "detalleProducto.css";
+@import "agregarProducto.css";
 
 /*---------------------------------------------- MAIN MOBILE FIRST------------------------------------- */
 h1{/* H1 DE REFERENCIA BORRAR DESPUES */

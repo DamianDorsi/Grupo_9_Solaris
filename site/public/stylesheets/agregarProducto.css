@@ -1,58 +1,50 @@
-#cargaProducto{
-    box-sizing: border-box;
-    background-color: var(--color-celesteCLaro);
-      height: 100vh;
-      font-size: small; 
-      padding-top: 10px;
-      padding-left: 50px;
-  }
-  #botonesFinales{
-    display: inline;
-    padding-left: 30px;
-    margin: 2px;
-  }
-  #cancelar{
-    margin-left: 10px;
-  }
-  @media(min-width:768px){
-    #cargaProducto{
-      background-color: var(--color-celesteCLaro);
-      width: 100%;
-        height: 100vh;
-        font-size: medium; 
-        padding-top: 10px;
-        padding-left: 200px;
-    }
-    #botonesFinales{
-      padding-left: 50px;
-      padding-bottom: 5px;
-    }
-    #cancelar{
-      margin-left: 10px;
-    }
-  }
-  @media(min-width:1024px) {
-    #cargaProducto{
-    text-align: center;
-      width: 100%;
-        height: 100vh;
-        font-size: large; 
-        padding-top: 20px;
-        padding-left: 30%;
-    }
-    .primerBloque{
-      overflow: hidden;
-      display: inline-block;
-    }
-    #precio{
-      float: right;
-    }
-    #botonesFinales{
-      padding-left: 60px;
-      padding-bottom: 5px;
-    }
-    #cancelar{
-      margin-left: 10px;
-    }
-  }
+.agregarProducto .row{
+  background-color: var(--color-celesteCLaro);
+}
+.agregarProducto #contenido{
+  padding: 0;
+}
+.agregarProducto .row{
+  justify-content: center;
+}
+.agregarProducto .form-row{
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.agregarProducto select{
+  font-size: 1.17em;
+}
+.agregarProducto label{
+  font-size: 1.3em;
+}
+.agregarProducto .stock,.destacado{
+  padding: 0;
+  margin-bottom: 10px;
+}
+.agregarProducto #imagen input{
+  padding: 0;
+  height: 32px;
+}
+.agregarProducto label:hover{
+  color: var(--color-celeste);
+}
+.agregarProducto input:hover{
+  border: 1px solid var(--color-celeste);
+}
+.agregarProducto input:focus{
+  background-color:  rgba(212, 211, 211, 0.63)
+}
+.agregarProducto textarea:hover{
+  border: 1px solid var(--color-celeste);
+}
+.agregarProducto textarea:focus{
+  background-color:  rgba(212, 211, 211, 0.63)
+}
+.agregarProducto .botones{
+  padding: 0 ;
+}
+.agregarProducto p{
+  color: red;
+}
 

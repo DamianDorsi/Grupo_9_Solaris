@@ -2,55 +2,116 @@
 <%- include("./partials/header") %> <!-- HEADER -->
 
 <!-- ACA EL CODIGO -->
-<main class="container-fluid" id="cargaProducto" spellcheck="true">
-    <div class="row">
-        <div class="col12">
-            <form id="furmularioCarga" class="col4">
-              <div class="row">
-                <div class="form-group" id="nombreProducto">
-                  <label for="exampleFormControlInput1">Nombre del producto</label>
-                  <input type="text" class="form-control" id="exampleFormControlInput1" required>
-                  <div class="invalid-feedback">
-                  </div>
-                </div>
-                <div class="form-group" id="precio">
-                    <label for="exampleFormControlInput1">Precio del producto</label>
-                    <input type="number" class="form-control" id="exampleFormControlInput1"  min=0 oninput="validity.valid||(value='');">
-                  </div>
-                </div>
-                  <div class="form-group" id="stock">
-                    <label for="exampleFormControlInput1">Indique el stock disponible</label>
-                    <input type="number" class="form-control" id="exampleFormControlInput1" min=0 oninput="validity.valid||(value='');" placeholder="">
-                  </div>
-                <div class="form-group" id="categorias">
-                  <label for="exampleFormControlSelect1">Seleccione una categoria</label>
-                  <select class="form-control" id="exampleFormControlSelect1">
-                    <option>Guitarras</option>
-                    <option>Bajos</option>
-                    <option>Baterias</option>
-                    <option>Accesorios</option>
-                  </select>
-                </div>
-                <div class="form-group" id="descripcion">
-                  <label for="exampleFormControlTextarea1">Ingrese una descripcion del producto</label>
-                  <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-                </div>
-                <form>
-                    <div class="form-group" id="subirImagen">
-                      <label for="exampleFormControlFile1">Seleccione una imagen del producto</label>
-                      <input type="file" class="form-control-file" id="exampleFormControlFile1">
-                    </div>
-                  </form>
-                  <div class="row">
-                  <div class="col6" id= "botonesFinales">
-                  <button class="btn btn-primary" type="submit">Publicar producto</button>
-                  <button class="btn btn-primary" id = "cancelar" type="submit">Cancelar</button>
-                    </div>
+<main class="container agregarProducto">
+  <section class="addProduct">
+      <div class="row productos">
+        <!-- TITULO PRINCIPAL  -->
+          <div class="titulo col-12 col-md-8 col-xl-8">
+              <h2>
+                  <%= title %> 
+              </h2>
+          </div>
 
+        <!-- contenedor de todo el formulario -->
+          <div class="col-12 ">
+              <div class="contenido text-left" id="contenido">
+                  <div class="row">
+                      <div class="col-12 col-md-8 col-xl-8 formulario">
+                              <div class="">
+                              
+                                  <form action="/productos/agregarProducto" method="POST" enctype="multipart/form-data">
+                                    <!-- TITULO DE LA PUBLICACION -->
+                                    <div class="form-group">
+                                      <label for="exampleFormControlInput1">Titulo de la publicación *</label>
+                                      <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="ingrese el titulo del producto" name="name" required>
+                                  </div>
+
+                                  <!-- CATEGORIA -->
+                                  <div class="categoria form-row">
+                                      <div class="col-6" >
+                                          <label for="select">Categoría *</label>
+                                          <select class="col-12" name="select" id="select">
+                                            <option value=""selected>Elija una categoria</option>
+                                            <option value="guitarra">Guitarra</option> 
+                                            <option value="bajo" >Bajo</option>
+                                            <option value="bateria">Bateria</option>
+                                            <option value="accesorio">Accesorio</option>
+                                          </select>                       
+                                      </div>
+                                      
+                                  <!-- CLASE -->
+                                      <div class="col-6" >
+                                        <label for="select">Clase *</label>
+                                        <select class="col-12" name="select" id="select">
+                                          <option value=""selected>Elija una clase</option>
+                                          <option value="value1">Electrico</option> 
+                                          <option value="value2">Acustico</option>
+                                          <option value="value3">electroacustico</option>
+                                          <option value="value3">criolla</option>
+                                        </select>                       
+                                    </div>
+                                  </div>
+
+                                  
+                                      <div class="form-row">
+                                   <!-- PRECIO -->
+                                          <div class="col">
+                                              <label for="price">Precio *</label>
+                                              <input type="number" class="form-control" id="price" name="price" placeholder="Ingrese el precio del producto" required>
+                                          </div>
+                                   <!-- DESCUENTO -->                                        
+                                          <div class="col">                                   
+                                              <label for="discount">Descuento</label>
+                                              <input type="number" class="form-control" id="discount" name="discount" placeholder="ingrese el descuento del producto" >
+                                          </div>
+                                      </div>
+
+                            
+                                        <!-- STOCK -->
+                                               <div class="stock col-6">
+                                                   <label for="stock">Stock *</label>
+                                                   <input type="number" class="form-control" id="stock" name="stock" placeholder="ingrese el stock del producto" required>
+                                               </div>
+
+                                        <!-- PRODUCTO DESTACADO -->
+                                               <div class="destacado mt-4">                                         
+                                                  <input type="checkbox" id="checkbox">
+                                                  <label for="checkbox">Producto destacado</label>
+                                                   
+                                               </div>
+                                          
+
+                                    <!-- DESCRIPCION -->
+                                      <div class="form-group">
+                                          <label for="exampleFormControlTextarea1">Descripción *</label>
+                                          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description" placeholder="Ingrese la descripcion del producto" required></textarea>
+                                      </div>
+
+                                    <!-- IMAGEN -->
+                                      <div class="form-group" id="imagen">
+                                          <label for="image">Elija una imagen *</label>
+                                          <input type="file" class="form-control" id="image" name='image' required>
+                                      </div>
+
+                                      <!-- info -->
+                                      <p> * (campos obligatorios)</p>
+
+                                    <!-- BOTONES PUBLICAR / DELETE --> 
+                                      <div class="container col-12">
+                                        <div class="row">
+                                          <button type="reset" class="btn btn-outline-secondary col-6">Borrar</button>
+                                          <button type="submit" class="btn btn-outline-primary col-6">Publicar</button>
+                                        </div>
+                                      </div>
+
+                                  </form><!-- FIN DE FORMULARIO -->
+                              </div>
+                      </div>
                   </div>
-              </form>
-        </div>
-    </div>
-</div>
+              </div>
+          </div>
+
+      </div>
+  </section>
 </main>
 <%- include("./partials/footer") %> <!-- FOOTER -->

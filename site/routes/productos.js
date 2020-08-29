@@ -11,6 +11,6 @@ router.get('/guitarras/:id?', Controller.guitarras);
 router.get('/bajos', Controller.bajos);
 router.get('/baterias', Controller.baterias);
 router.get('/accesorios', Controller.accesorios);
-router.get('/agregar', Controller.agregar);
+router.get('/agregarProducto', Controller.agregar);
 
 module.exports = router;
