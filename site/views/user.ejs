@@ -3,9 +3,11 @@
 
 <!-- ACA EL CODIGO -->
 <main>
-    <form class="container login" action="">
-        <section class="cajaPrincipal">
-            <article class="log">
+    <!-- Caja principal contenedora de login y registro -->
+    <section class="container login" action="">
+        <!-- FORMULARIO LOGIN -->
+        <form class="log">
+            
                 <h1>Ingresá</h1>
                     <div class="datos">
                         <input type="text" name="Nombre" id="name" placeholder="Nombre de Usuario"><label for="name"><i class="fas fa-user"></i></label>
@@ -21,8 +23,12 @@
                     <button type="submit">Aceptar</button>
                     <i class="fad fa-horizontal-rule"></i>
                      </div>
-            </article>   
-            <article class="registro">
+             
+        </form> 
+
+        <!-- FORMULARIO REGISTRO -->
+        <form action="" class="registro">
+            
                 <h2>Registrate</h2>
                 <div class="datos">
                     <input type="text" name="nombre" id="nameRegistro" placeholder="Nombre de usuario"><label for="nameRegistro"><i class="fas fa-user"></i></label>
@@ -42,11 +48,9 @@
                 </div>
                 
                 <button type="submit">Aceptar</button>
-                
-
-            </article>
-        </section>
-    </form>
+        </form>
+    </section>
+    
 </main>
 
 <%- include("./partials/footer") %> <!-- FOOTER -->

@@ -1,10 +1,9 @@
 .login{
     width: 100%;
-}
-.login .cajaPrincipal{
-    margin: 15px;
+    margin-top: 15px;
     border: 1px solid var(--color-azul);
 }
+
 .login h1 , h2{
     text-align: center;
     /* font-size: 24px; */
@@ -13,17 +12,17 @@
     padding-top: 0;
     margin-top: 10px;
   }
-.login article{
+.login form{
     text-align: center;
 }
-.login article input, button{
+.login form input, button{
     font-size: 15px;
     border-radius: 5px;
     border: none;
     padding: 5px;
     margin: 5px 0;
 }
-.login article i{
+.login form i{
     font-size: 35px;
     color: var(--color-azul);
     padding: 0 12px;
@@ -35,7 +34,7 @@
 text-align: center;
    
 }
-.login article a{
+.login form a{
     text-decoration: dashed;
     color: brown;
     text-align: left;
@@ -57,10 +56,10 @@ text-align: center;
 .login .datos input:focus{
    background-color:  rgba(212, 211, 211, 0.63)
 }
-.login article i:hover{
+.login form i:hover{
     color: var(--color-celeste);
 }
-.login article button:hover{
+.login form button:hover{
     background-color: var(--color-celeste);;
 }
 
