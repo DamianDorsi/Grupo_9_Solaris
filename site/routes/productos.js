@@ -2,7 +2,7 @@ var express = require('express');
 const { request } = require('../app');
 var router = express.Router();
 
-let Controller = require("../controllers/productosController")
+const Controller = require("../controllers/productosController")
 
 /* paginas de productos. */
 router.get('/', Controller.listar);
