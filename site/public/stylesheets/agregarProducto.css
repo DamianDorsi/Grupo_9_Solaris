@@ -48,3 +48,19 @@
   color: red;
 }
 
+/* botones de editar producto */
+
+.agregarProducto .titulo{
+  position: relative;
+}
+.agregarProducto #botonNext {
+  background-color: none;
+  position: absolute;
+  top: 1px;
+  right: 1;
+}
+.agregarProducto #botonNext i{
+  color:white;
+  font-size: 1.8em;
+  
+}

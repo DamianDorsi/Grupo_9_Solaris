@@ -4,6 +4,8 @@
 @import "login.css";
 @import "detalleProducto.css";
 @import "agregarProducto.css";
+@import "adminProductos.css";
+@import "adminUser.css";
 
 /*---------------------------------------------- MAIN MOBILE FIRST------------------------------------- */
 h1{/* H1 DE REFERENCIA BORRAR DESPUES */

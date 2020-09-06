@@ -16,8 +16,11 @@
                         <div class="row">
                             <div class="col-12 col-lg-8 Descripcion">
                                <!--  <figure class="text-center"> -->
-                                   <figure>
-                                    <img src="/images/productos/<%= producto.image %>" class="img-fluid" alt="">
+                                <figure>
+                                    <a href="/productos/detalle/<%= producto.id %> ">
+                                        <img src="/images/productos/<%- producto.image %>  " alt=" ">
+                                    </a>
+          
                                 </figure>
                                 <!-- </figure> -->
                                 <div class="titulo">
@@ -45,7 +48,16 @@
 
                                 <p><i class="fas fa-credit-card mr-3 my-4"></i>Pagá en 12 cuotas sin interés</p>
                                 <p><i class="fas fa-store mr-3 my-4"></i>Retiro gratis en nuestras sucursales</p>
+
                                 <button type="submit" class="btn btn-danger"><a href="/">Agregar al carrito</a></button>
+
+
+                                                                                <!-- BOTONES ADMINISTRADOR PRODUCTO -->
+                                                                                <div class="d-flex justify-content-end" id="menuAdmin">
+                                                                                    <form action="/productos/admin/<%= producto.id %>" method="GET">
+                                                                                        <button class="btn btn-outline-light"> <h4 class="fas fa-edit text-primary">Editar</h4></button>
+                                                                                    </form>
+                                                                                </div>
                             </div>
                         </div>
                     </div>

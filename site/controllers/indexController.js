@@ -6,13 +6,18 @@ module.exports={
           return producto.discount > 0
       })
       let novedades = dbProduct.filter(producto =>{
-        return producto.destacado == true
+        return producto.destacado == "on"
       })
       res.render('index', {
           title: 'Solaris',
           oferta: oferta,
           novedades:novedades
           });
+  },
+  admin:function(req,res,next){
+    res.render("administracion",{
+      title: "Administracion"
+    })
   },
     quienesSomos:function(req, res, next) {
         res.render('quienesSomos', { title: 'Nosotros' });

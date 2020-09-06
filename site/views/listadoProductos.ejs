@@ -12,12 +12,10 @@
 
         <!--caja que contiene el titulo de la sección-->
         <div class="titulo col-12">
-            <h2>
-                Estos son los resultados de "<%= buscar %>"
-            </h2>
+                <h2>Listado de productos</h2>            
         </div>
 
-        <% producto.forEach(producto => { %>
+        <% productos.forEach(producto => { %>
 
         <!--caja de la grilla de bootstrap-->
         <div class="grilla col-12 col-md-6 col-lg-3">
@@ -34,7 +32,7 @@
                 </figure>
 
                 <!--informacion-->
-                <article>
+                <article>                    
                     <!--precio-->
                     <h2 class="col-12"><%= "$" +producto.price %> </h2>
                     <!--descuento-->
@@ -45,19 +43,21 @@
                         <%}%>
                     <!--nombre del producto ??-->
                     <p class="col-12"><%= producto.name %> </p>
+                    
                 </article>
-                                <!-- BOTONES ADMINISTRADOR PRODUCTO -->
-                                <div class="d-flex justify-content-around" id="menuAdmin">
-                                    <form action="/productos/detalle/<%= producto.id %>" method="GET">
-                                        <button class="btn btn-outline-light"> <h4 class="fas fa-info-circle text-info"></h4></button>
-                                    </form>
-                                    <form action="/productos/editar/<%= producto.id %>" method="GET">
-                                        <button class="btn btn-outline-light"> <h4 class="fas fa-edit text-primary"></h4></button>
-                                    </form>
-                                    <form action="/productos/delete/<%= producto.id %>?_method=DELETE" method="POST">
-                                        <button class="btn btn-outline-light"> <h4 class="fas fa-trash-alt text-danger"></h4></button>
-                                    </form>
-                                </div>
+
+                <!-- BOTONES ADMINISTRADOR PRODUCTO -->
+                <div class="d-flex justify-content-around" id="menuAdmin">
+                    <form action="/productos/detalle/<%= producto.id %>" method="GET">
+                        <button class="btn btn-outline-light"> <h4 class="fas fa-info-circle text-info"></h4></button>
+                    </form>
+                    <form action="/productos/editar/<%= producto.id %>" method="GET">
+                        <button class="btn btn-outline-light"> <h4 class="fas fa-edit text-primary"></h4></button>
+                    </form>
+                    <form action="/productos/delete/<%= producto.id %>?_method=DELETE" method="POST">
+                        <button class="btn btn-outline-light"> <h4 class="fas fa-trash-alt text-danger"></h4></button>
+                    </form>
+                </div>
 
                 <!--finaliza contenido-->
             </div>

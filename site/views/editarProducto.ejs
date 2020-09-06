@@ -1,0 +1,159 @@
+<%- include("./partials/head") %> <!-- HEAD -->
+<%- include("./partials/header") %> <!-- HEADER -->
+
+
+<main class="container agregarProducto">
+    <section class="addProduct">
+        <div class="row productos">
+          <!-- TITULO PRINCIPAL  --> 
+            <div class="titulo col-12">
+              <div class="row">
+                  <div class="col-1">
+                      <% if (producto.id>1) { %>
+                          <a href="/productos/editar/<%- producto.id-1 %> "><i class="fas fa-chevron-circle-left"></i></a>
+                          <% } %>
+                  </div>
+                  <div class="col-10">
+                      <h2 class="text-center">
+                          <%= producto.name %>
+                      </h2>
+                  </div>
+                  <div class="col-1">
+                      <% if (producto.id < total) { %>
+                          <a href="/productos/editar/<%- producto.id+1 %> " ><i class="fas fa-chevron-circle-right"></i></a>
+
+                          <% } %>
+                  </div>
+              </div>
+
+
+          </div>
+          <!-- contenedor de todo el formulario -->
+            <div class="col-12">
+                <div class="contenido text-left" id="contenido">
+                    <div class="row">
+                        <div class="col-12 col-md-8 col-xl-8 formulario">
+                                <div class="">
+                                <!-- FORMULARIO -->
+                                <form action="/productos/editar/<%= producto.id %>?_method=PUT " method="POST" >
+                                      <!-- TITULO DE LA PUBLICACION -->
+                                      <div class="form-group">
+                                        <label for="exampleFormControlInput1">Titulo de la publicación *</label>
+                                        <input type="text" class="form-control" id="exampleFormControlInput1" value="<%= producto.name %>" name="name" required>
+                                    </div>
+  
+                                    <!-- CATEGORIA -->
+                                    <div class="categoria form-row">
+                                        <div class="col-6" >
+                                            <label for="select">Categoría *</label>
+                                            <select class="col-12" name="category" id="select">
+                                              <% if(producto.category == "guitarra") { %>                                            
+                                              <option value="guitarra"selected>Guitarra</option> 
+                                              <option value="bajo" >Bajo</option>
+                                              <option value="bateria">Bateria</option>
+                                              <option value="accesorio">Accesorio</option>
+                                              <% } else if(producto.category == "bajo") {%>
+                                                <option value="guitarra">Guitarra</option> 
+                                                <option value="bajo" selected>Bajo</option>
+                                                <option value="bateria">Bateria</option>
+                                                <option value="accesorio">Accesorio</option>
+                                              <% } else if(producto.category == "bateria") {%>
+                                                <option value="guitarra">Guitarra</option> 
+                                                <option value="bajo" >Bajo</option>
+                                                <option value="bateria" selected>Bateria</option>
+                                                <option value="accesorio">Accesorio</option>
+                                              <% } else  {%>
+                                                <option value="guitarra">Guitarra</option> 
+                                                <option value="bajo" >Bajo</option>
+                                                <option value="bateria" >Bateria</option>
+                                                <option value="accesorio"selected>Accesorio</option>
+
+                                              <% } %> 
+                                            </select>                       
+                                        </div>
+                                        
+                                    <!-- CLASE -->
+                                        <div class="col-6" >
+                                          <label for="select">Clase *</label>
+                                          <select class="col-12" name="clase" id="select">
+                                            <option value=""selected>Elija una clase</option>
+                                            <option value="value1">Electrico</option> 
+                                            <option value="value2">Acustico</option>
+                                            <option value="value3">electroacustico</option>
+                                            <option value="value3">criolla</option>
+                                          </select>                       
+                                      </div>
+                                    </div>
+  
+                                    
+                                        <div class="form-row">
+                                     <!-- PRECIO -->
+                                            <div class="col">
+                                                <label for="price">Precio *</label>
+                                                <input type="number" class="form-control" id="price" name="price" value=<%= producto.price %>  required>
+                                            </div>
+                                     <!-- DESCUENTO -->                                        
+                                            <div class="col">                                   
+                                                <label for="discount">Descuento</label>
+                                                <input type="number" class="form-control" id="discount" name="discount" value=<%= producto.discount %>  >
+                                            </div>
+                                        </div>
+                                        <p>(Debe introducir el precio y descuento del producto sin punto ni coma)</p>
+  
+                              
+                                          <!-- STOCK -->
+                                                 <div class="stock col-6">
+                                                     <label for="stock">Stock *</label>
+                                                     <input type="number" class="form-control" id="stock" name="stock" value=<%= producto.stock %>  required>
+                                                 </div>
+  
+                                          <!-- PRODUCTO DESTACADO -->
+                                                 <div class="destacado mt-4">                                         
+                                                    <input type="checkbox" id="checkbox" name="destacado" value="<%= producto.destacado %>" >
+                                                    <label for="checkbox">Producto destacado</label>
+                                                     
+                                                 </div>
+                                            
+  
+                                      <!-- DESCRIPCION -->
+                                        <div class="form-group">
+                                            <label for="exampleFormControlTextarea1">Descripción *</label>
+                                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="description"  required><%= producto.description %></textarea>
+                                        </div>
+  
+                                      <!-- IMAGEN -->
+                                        <div class="form-group" id="imagen">
+                                            
+                                            <div class="col-12 col-md-4 col-xl-4 mt-3">
+                                              <figure class="text-center">
+                                                  <img src="/images/productos/<%= producto.image %> " alt="" class="img-fluid">
+                                              </figure>
+                                          </div>
+                                          <label for="image">Elija una imagen *</label>
+                                          <input type="file" class="form-control" name="image">
+                                        </div>
+                                        
+  
+                                        <!-- info -->
+                                        <p> * (campos obligatorios)</p>
+  
+                                      <!-- BOTONES PUBLICAR / DELETE --> 
+                                        <div class="container col-12">
+                                          <div class="row">
+                                            <button type="reset" class="btn btn-outline-secondary col-6">Borrar</button>
+                                            <button type="submit" class="btn btn-outline-primary col-6">Actualizar</button>
+                                          </div>
+                                        </div>
+  
+                                    </form><!-- FIN DE FORMULARIO -->
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+  
+        </div>
+    </section>
+  </main>
+
+<%- include("./partials/footer") %> <!-- FOOTER -->

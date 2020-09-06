@@ -10,5 +10,5 @@ router.get("/search", Controller.search)
 router.get('/quienesSomos', Controller.quienesSomos);
 router.get('/sucursales', Controller.sucursales);
 router.get('/contacto', Controller.contacto);
-
+router.get("/admin/", Controller.admin)
 module.exports = router;

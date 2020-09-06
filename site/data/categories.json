@@ -1,0 +1,37 @@
+[
+    {
+      "id": "1",
+      "name": "Guitarras",
+      "sub": [
+        "Acustica",
+        "Electrica",
+        "Electro-acustica",
+        "Criolla"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Bajos",
+      "sub": [
+        "Electrico",
+        "Acústico"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "Baterias",
+      "sub": [
+        "Acusticas",
+        "Electronicas"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Accesorios",
+      "sub": [
+        "Guitarra",
+        "Bajo",
+        "Bateria"
+      ]
+    }
+  ]

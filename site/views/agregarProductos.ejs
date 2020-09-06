@@ -18,7 +18,7 @@
                   <div class="row">
                       <div class="col-12 col-md-8 col-xl-8 formulario">
                               <div class="">
-                              
+                              <!-- FORMULARIO -->
                                   <form action="/productos/agregarProducto" method="POST" enctype="multipart/form-data">
                                     <!-- TITULO DE LA PUBLICACION -->
                                     <div class="form-group">
@@ -30,7 +30,7 @@
                                   <div class="categoria form-row">
                                       <div class="col-6" >
                                           <label for="select">Categoría *</label>
-                                          <select class="col-12" name="select" id="select">
+                                          <select class="col-12" name="category" id="select">
                                             <option value=""selected>Elija una categoria</option>
                                             <option value="guitarra">Guitarra</option> 
                                             <option value="bajo" >Bajo</option>
@@ -42,12 +42,12 @@
                                   <!-- CLASE -->
                                       <div class="col-6" >
                                         <label for="select">Clase *</label>
-                                        <select class="col-12" name="select" id="select">
+                                        <select class="col-12" name="clase" id="select">
                                           <option value=""selected>Elija una clase</option>
-                                          <option value="value1">Electrico</option> 
-                                          <option value="value2">Acustico</option>
-                                          <option value="value3">electroacustico</option>
-                                          <option value="value3">criolla</option>
+                                          <option value="Electrica">Electrico</option> 
+                                          <option value="Acustica">Acustico</option>
+                                          <option value="electroAcustico">electroacustico</option>
+                                          <option value="criolla">criolla</option>
                                         </select>                       
                                     </div>
                                   </div>
@@ -65,6 +65,7 @@
                                               <input type="number" class="form-control" id="discount" name="discount" placeholder="ingrese el descuento del producto" >
                                           </div>
                                       </div>
+                                      <p>(Debe introducir el precio y descuento del producto sin punto ni coma)</p>
 
                             
                                         <!-- STOCK -->
@@ -75,7 +76,7 @@
 
                                         <!-- PRODUCTO DESTACADO -->
                                                <div class="destacado mt-4">                                         
-                                                  <input type="checkbox" id="checkbox">
+                                                  <input type="checkbox" id="checkbox" name="destacado">
                                                   <label for="checkbox">Producto destacado</label>
                                                    
                                                </div>
@@ -90,7 +91,7 @@
                                     <!-- IMAGEN -->
                                       <div class="form-group" id="imagen">
                                           <label for="image">Elija una imagen *</label>
-                                          <input type="file" class="form-control" id="image" name='image' required>
+                                          <input type="file" class="form-control" id="image" name='image'>
                                       </div>
 
                                       <!-- info -->
