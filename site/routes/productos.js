@@ -3,7 +3,7 @@ var router = express.Router();
 var multer = require('multer');
 var path = require('path')
 
-let Controller = require("../controllers/productosController")
+const Controller = require("../controllers/productosController")
 
 /* configuracion multer para subir imagenes */
 var storage = multer.diskStorage({
