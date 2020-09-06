@@ -93,9 +93,16 @@ module.exports={
       editar: (req, res) => {
         users.forEach(user => {
             if (user.id == req.params.id){
-              user.nombre = req.body.nombre.trim(),
+              user.nombre = req.body.nombre.trim().replace(/\b\w/g, l => l.toUpperCase()),
+              user.apellido = req.body.apellido.trim().replace(/\b\w/g, l => l.toUpperCase()),
               user.category= req.body.category.trim(),
               user.image = (req.files[0]?req.files[0].filename:user.image)
+              user.edad = Number(req.body.edad),
+              user.email = req.body.email.trim(),
+              user.pais = req.body.pais.trim(),
+              user.localidad = req.body.localidad.trim(),
+              user.direccion = req.body.direccion.trim(),
+              user.compras = req.body.compras
             }
         })
         usersJSON = JSON.stringify(users)
@@ -103,6 +110,25 @@ module.exports={
         fs.writeFileSync(path.join(__dirname, '..', 'data', 'users.json') , usersJSON)
 
         res.redirect('/users/admin/' + req.params.id)
+  },
+  eliminar: (req, res) => {
+    let indiceProducto;
+    // RECORRO LA BD
+    users.forEach(user => {
+        // BUSCO EL PRODUCTO QUE SE QUIERE ELIMINIAR
+        if(user.id == req.params.id){
+            // AVERIGO EL INIDICE DEL PRODUCTO A ELIMINAR
+            indiceProducto = users.indexOf(user)
+        }
+    })
+    // LO ELIMINO
+    users.splice(indiceProducto, 1)
+
+    usersJSON = JSON.stringify(users)
+
+    fs.writeFileSync(path.join(__dirname, '..', 'data', 'users.json') , usersJSON)
+
+    res.redirect("/users/admin/1")
   }
 
      

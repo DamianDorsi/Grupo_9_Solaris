@@ -27,6 +27,9 @@ router.post('/registro',registerValidator,Controller.register)
 router.post('/login',loginValidator, Controller.login)
 router.get("/perfil", Controller.perfil)
 
+router.put('/editar/:id', upload.any(),Controller.editar)
+
+router.delete('/delete/:id', Controller.eliminar)
 
 router.get("/admin/:id", Controller.admin)
 

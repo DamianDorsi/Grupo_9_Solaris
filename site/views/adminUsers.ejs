@@ -25,7 +25,7 @@
                         <a class="nav-link" id="profile-tab" data-toggle="tab" href="#delete" role="tab" aria-controls="detalle" aria-selected="false">Eliminar Usuario</a>
                     </li>
                     <li class="nav-item col-6 col-lg-12" role="presentation">
-                        <a class="nav-link text-center" id="profile-tab" data-toggle="tab" href="#todosMisusers" role="tab" aria-controls="detalle" aria-selected="false">Todos mis Usuarios</a>
+                        <a class="nav-link text-center" id="profile-tab" data-toggle="tab" href="#todosMisUsers" role="tab" aria-controls="detalle" aria-selected="false">Todos mis Usuarios</a>
                     </li>
                 </ul>
 
@@ -47,9 +47,9 @@
                                     </div>
                                     <!-- NOMBRE DEL user -->
                                     <div class="col-10">
-                                        <h3 class="text-center">
+                                        <h5 class="text-center">
                                             <%= user.nombre %> <%= user.apellido %>
-                                        </h3>
+                                        </h5>
                                     </div>
                                     <!-- FLECHA DERECHA -->
                                     <div class="col-1">
@@ -64,7 +64,7 @@
                             <!-- IMAGEN -->
                             <div class="col-12 col-md-4 mt-3">
                                 <figure class="text-center">
-                                    <a href="/users/admin/<%= user.id %>"><img src="/images/productos/default-image.png" alt="" class="img-fluid"></a>
+                                    <a href="/users/admin/<%= user.id %>"><img src="/images/users/<%= user.image %> " alt="" class="img-fluid"></a>
                                 </figure>
                             </div>
 
@@ -123,96 +123,69 @@
                     
 
                     <!-- FORMULARIO EDITAR -->
-                    <div class="container tab-pane fade " id="editar" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="container tab-pane fade  " id="editar" role="tabpanel" aria-labelledby="home-tab">
                         <form action="/users/editar/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-                            
-                            <div class="row p-3 col-12">
-                                 <!-- EDITAR IMAGEN -->
-                                <div class="col-12 col-md-4 col-xl-4 mt-3">
-                                    <figure class="text-center">
-                                        <img src="/images/productos/default-image.png" alt="" class="img-fluid">
-                                    </figure>
-                                    <input type="file" class="form-control" name="image">
-                                </div>
+                            <div class="col-12 p-3">
+                                <div class="row titFlechas col-12 ">
 
-                                <div class="col-12 col-lg-8"> <!-- NOMBRE Y APELLIDO -->
-                                <!-- EDITAR NOMBRE DE user -->
+                                    <!-- IMAGEN -->
+                                    <div class="col-12 col-md-4 mt-3">
+                                        <figure class="text-center">
+                                            <a href="/users/admin/<%= user.id %>"></a><img src="/images/users/<%= user.image %> " alt="" class="img-fluid"></a>
+                                            <input type="file" name="image" class="col-12">
+                                        </figure>
+                                    </div>
 
-                                <div class="form-group col-12 ">
-                                    <label for="">Nombre</label>
-                                    <input class="form-control" type="text" value="<%= user.nombre%>" name="name">
-                                </div>
-                                    <!-- APELLIDO -->
-                                <div class="form-group col-12 ">
-                                    <label for="">Apellido</label>
-                                    <input class="form-control" type="text" value="<%= user.apellido%>" name="apellido">
-                                </div>
-                                
-     
-                                    
-                                        <!-- EDAD -->
-                                        <div class="col-12 col-lg-3">
-                                            <label for="">Edad:</label><input type="number" value="<%= user.edad %>" name="edad">
-                                        </div>
-                                        <!-- CATEGORIA -->
-                                        <div class="col-12 col-lg-4">
-                                            <span><b>Categoría:</b> 
-                                                <%= user.category %>
-                                            </span>
-                                        </div>
-                                        <!-- MAIL -->
-                                        <div class="col-12 col-lg-4">
-                                            <span><b>Email:</b> 
-                                                <%= user.email %>
-                                            </span>
-                                        </div>
-                                        <!-- PAIS -->
-                                        <div class="col-12 col-lg-4">
-                                            <span><b>Pais:</b> 
-                                                <%= user.pais %>
-                                            </span>
-                                        </div>
-                                      <!-- LOCALIDAD -->
-                                        <div class="col-12 col-lg-4">
-                                            <span><b>Localidad:</b> 
-                                                <%= user.localidad %>
-                                            </span>
-                                        </div>
-                                       <!-- DIRECCION -->
-                                        <div class="col-12 col-lg-4">
-                                            <span><b>Direccion:</b> 
-                                                <%= user.direccion %>
-                                            </span>
-                                        </div>
-                                        <!-- COMPRAS -->
-                                        <div class="col-12 -">
-                                            <span><b>Compras realizadas:</b> 
-                                                <%= user.compras %>
-                                            </span>
-                                        </div>
-                                    
-                                
-                                </div>
-
-
-
-
-                                        <!-- BOTONES  EDIT-->
+                                    <!-- NOMBRE DEL user -->
+                                    <div class="col-12 col-md-8">
+                                        <h5 class="text-left">
+                                            <label for=""class="col-12 col-md-3">Nombre </label>
+                                            <input type="text" class="" value="<%= user.nombre %>" name="nombre">
+                                        </h5>
+                                        <h5 class="text-left">
+                                            <label for=""class="col-12 col-md-3">Apellido</label>
+                                            <input type="text" value="<%= user.apellido %>" name="apellido"> 
+                                        </h5>    
+                                        <h5 class="text-left">
+                                            <label for=""class="col-12 col-md-3">Edad</label>
+                                            <input type="Number" value="<%= user.edad %>" name="edad"> 
+                                        </h5>   
+                                        <h5 class="text-left">
+                                            <label for="" class="col-12 col-md-3">Email</label>
+                                            <input type="email" value="<%= user.email %>" name="email"> 
+                                        </h5>
+                                        <h5 class="text-left">
+                                            <label for="" class="col-12 col-md-3">Categoria</label>
+                                            <input type="text" value="<%= user.category %>" name="category"> 
+                                        </h5> 
+                                        <h5 class="text-left">
+                                            <label for="" class="col-12 col-md-3">Pais</label>
+                                            <input type="text" value="<%= user.pais %>" name="pais"> 
+                                        </h5>  
+                                        <h5 class="text-left">
+                                            <label for="" class="col-12 col-md-3">Localidad</label>
+                                            <input type="text" value="<%= user.localidad %>" name="localidad"> 
+                                        </h5> 
+                                        <h5 class="text-left">
+                                            <label for="" class="col-12 col-md-3">Direccion</label>
+                                            <input type="text" value="<%= user.direccion %>" name="direccion"> 
+                                        </h5>   
+                                        <h5 class="text-left">
+                                            <label for="" class="col-12 col-md-3">Compras Realizadas</label>
+                                            <input type="text" value="<%= user.compras %>" name="compras"> 
+                                        </h5> 
+                                         <!-- BOTONES  EDIT-->
                                         <div class="col-12 d-flex justify-content-center" id="botones">
                                             <button class="btn btn-danger mr-2">Cancelar</button>
                                             <button class="btn btn-info" type="submit" name="id" value="<%= user.id %> ">Actualizar</button>
 
-                                        </div>
-                            </div>
-                            
-                                
-                            
-                                
+                                        </div>                
+                                    </div>
+
+                                </div>
+                            </div><!-- FIN FLECHAS NAVEGACION -->
                         </form>
                         
-                    
-
-
                     </div><!-- FIN EDITAR -->
 
                     <!-- ELIMINAR user  -->
@@ -220,93 +193,98 @@
 
                         <div class="row p-3">
 
-                            
+                            <!-- FLECHAS NAVEGACION Y NOMBRE -->
                             <div class="col-12">
-                                <div class="row">
+                                <div class="row titFlechas col-12">
                                     <!-- NOMBRE DEL user -->
                                     <div class="col-10">
-                                        <h3 class="text-center">
-                                            <%= user.name %>
-                                        </h3>
+                                        <h5 class="text-center">
+                                            <%= user.nombre %> <%= user.apellido %>
+                                        </h5>
                                     </div>
                                 </div>
-                            </div><!-- FIN FLECHAS NAVEGACION -->
+                            </div>
 
                             <!-- IMAGEN -->
                             <div class="col-12 col-md-4 mt-3">
                                 <figure class="text-center">
-                                    <a href="/users/detalle/<%= user.id %>"><img src="/images/users/<%= user.image %> " alt="" class="img-fluid"></a>
+                                    <a href="/users/admin/<%= user.id %>"><img src="/images/users/<%= user.image %> " alt="" class="img-fluid"></a>
                                 </figure>
                             </div>
 
                             <!-- INFO user -->
                             <div class="col-12 col-md-8 mt-3">
-
-                                <!-- DESCRIPCION -->
-                                <p>
-                                    <%= user.description %>
-                                </p>
-                                
+     
                                 <div class="row">
+                                    <!-- EDAD -->
+                                    <div class="col-12 col-lg-4">
+                                        <span><b>Edad:</b> 
+                                            <%= user.edad %>
+                                        </span>
+                                    </div>
                                     <!-- CATEGORIA -->
                                     <div class="col-12 col-lg-4">
                                         <span><b>Categoría:</b> 
                                             <%= user.category %>
                                         </span>
                                     </div>
-                                    <!-- CLASE -->
+                                    <!-- MAIL -->
                                     <div class="col-12 col-lg-4">
-                                        <span><b>Clase:</b> 
-                                            <%= user.clase %>
+                                        <span><b>Email:</b> 
+                                            <%= user.email %>
                                         </span>
                                     </div>
-
-                                    <!-- STOCK -->
+                                    <!-- PAIS -->
                                     <div class="col-12 col-lg-4">
-                                        <span><b>Stock:</b> 
-                                            <%= user.stock %>
+                                        <span><b>Pais:</b> 
+                                            <%= user.pais %>
                                         </span>
                                     </div>
-                                    <!-- user DESTACADO -->
+                                  <!-- LOCALIDAD -->
                                     <div class="col-12 col-lg-4">
-                                        <span><b>user destacado:</b> 
-                                            <%=(user.destacado == "on")?"si":"no"%>      
+                                        <span><b>Localidad:</b> 
+                                            <%= user.localidad %>
                                         </span>
                                     </div>
-                                    <!-- DESCUENTO -->
-                                    <div class="col-12 col-md-6 col-lg-4">
-                                        <span><b>Descuento:</b> 
-                                        <%=user.discount%>%
-                                    </span>
+                                   <!-- DIRECCION -->
+                                    <div class="col-12 col-lg-4">
+                                        <span><b>Direccion:</b> 
+                                            <%= user.direccion %>
+                                        </span>
                                     </div>
-                                    <div class="col-12 d-flex justify-content-center mt-5" id="botones">
-                                    <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST">
-                                        
-                                        <button class="btn btn-danger ">ELIMINAR user</button>
-                                    </form>
-                                </div>
-
+                                    <!-- COMPRAS -->
+                                    <div class="col-12 -">
+                                        <span><b>Compras realizadas:</b> 
+                                            <%= user.compras %>
+                                        </span>
+                                    </div>
                                 </div><!--  -->
+                                <div class="col-12 d-flex justify-content-center mt-5" id="botones"></div>
+                                <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST">
+                                                
+                                    <button class="btn btn-danger ">ELIMINAR USUARIO</button>
+                                </form>
+                                </div>
                             </div><!-- FIN INFO user -->
 
 
-                        </div>
+                        
                     </div><!-- FIN ELIMINAR -->
  
                      <!-- TODOS MIS user  -->
-                    <div class="container tab-pane fade" id="todosMisusers" role="tabpanel" aria-labelledby="home-tab">
+                    <div class="container tab-pane fade" id="todosMisUsers" role="tabpanel" aria-labelledby="home-tab">
 
                         <div class="row p-3">
                             <!-- IMAGEN -->
                             <% usersTotales.forEach( user=> { %>
                             <div class="col-12">
                                 <ul>
-                                    <li><a href="/users/admin/<%= user.id %>"><%= user.nombre %>  <%= user.apellido %>  | <%= user.email %> </a></li>
+                                    <li><a href="/users/admin/<%= user.id %>"><h5 style="color: var(--color-azul);"><%= user.id %> - <%= user.nombre %>  <%= user.apellido %> | <%= user.email %> </h5></a></li>
                                 </ul>
                             </div>
                             <% }) %>
                         </div>
-                    </div><!-- TODOS MIS userS -->
+                    </div><!-- FIN TODOS MIS userS -->
 
 
 

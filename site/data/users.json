@@ -117,15 +117,6 @@
         "image": "user_13.jpg"
     },
     {
-        "id": 14,
-        "nombre": "Cello",
-        "apellido": "Fortye",
-        "email": "cfortyed@qq.com",
-        "password": "Z3rcWZ5qWpDp",
-        "category": "user",
-        "image": "user_14.jpg"
-    },
-    {
         "id": 15,
         "nombre": "Marrilee",
         "apellido": "Chrestien",
@@ -177,12 +168,25 @@
         "email": "jtaggettj@rakuten.co.jp",
         "password": "jElxzan5Z",
         "category": "user",
-        "image": "user_20.jpg"
+        "image": "user_20.jpg",
+        "edad": 20,
+        "pais": "",
+        "localidad": "",
+        "direccion": "",
+        "compras": ""
     },
     {
-        "id": 21,
-        "nombre": "ezequiel",
+        "id": 14,
+        "nombre": "Ezequiel",
         "email": "zapata.ed1989@gmail.com",
-        "password": "$2b$10$c.XLg6uMGHAIVv0nbSaLS.DK2r9LbOc5Xx4LLHbOkQD1bt31jH0q."
+        "password": "$2b$10$c.XLg6uMGHAIVv0nbSaLS.DK2r9LbOc5Xx4LLHbOkQD1bt31jH0q.",
+        "category": "user",
+        "edad": 30,
+        "pais": "Argentina",
+        "localidad": "LANUS - MONTE CHINGOLO",
+        "direccion": "",
+        "compras": "",
+        "apellido": "Zapata",
+        "image": "image-1599431227518.jpg"
     }
 ]
