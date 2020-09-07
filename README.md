@@ -3,12 +3,8 @@
 
 ## Integrantes
 
-### Damián Dorsi
-- 27 años
-- [damian.dorsi@gmail.com](damian.dorsi@gmail.com)
-
 ### Ezequiel David Zapata
-- 30 años
+- 30 años.
 - [zapata.ed1989@gmail.com](zapata.ed1989@gmail.com)
 
 ## Lista de páginas de referencia:
