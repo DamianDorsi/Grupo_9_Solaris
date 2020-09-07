@@ -4,6 +4,27 @@
 
 <main>
     <h2>Bienvenido <%= user%> </h2>
+
+
+    <div class="container" id="adminProductos"><!-- container bootstrap -->
+        <section class="Productos">
+            <div class="row productos">
+
+                <div class="contenido text-left"><!-- contenedor principal-->
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+        <li class="nav-item col-6 col-lg-3" role="presentation">
+            <a class="nav-link " id="home-tab" data-toggle="tab" href="#" role="tab" aria-controls="home" aria-selected="true">Mi perfil</a>
+        </li>
+        <li class="nav-item col-6 col-lg-3" role="presentation">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#" role="tab" aria-controls="detalle" aria-selected="false">Mis compras</a>
+        </li>
+        <li class="nav-item col-6 col-lg-3" role="presentation">
+            <a class="nav-link" id="profile-tab" data-toggle="tab" href="#" role="tab" aria-controls="detalle" aria-selected="false">Productos favoritos</a>
+        </li>
+    </ul>
+</div></div></section></div>
+    
 </main>
 
 <%- include("./partials/footer") %> <!-- FOOTER -->
